@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'start');
+Route::view('/auth/login', 'auth.login');
