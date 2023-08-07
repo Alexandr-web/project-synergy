@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/auth/login', 'auth.login');
+Route::view('/', 'index');
