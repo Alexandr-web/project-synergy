@@ -8,7 +8,11 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    @yield('content')
+    <main>
+        <div class="container">
+            @yield('content')
+        </div>
+    </main>
     @yield('scripts')
 </body>
 </html>
