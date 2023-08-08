@@ -40,7 +40,7 @@ export default class ValidForm {
     }
 
     lettersOnly(value) {
-        return value.split("").every((l) => !this.isNumber(l) || /\s/.test(l));
+        return /^[\sа-я\s]*$/i.test(value);
     }
 
     _getOptionsExceptTypeFile() {
