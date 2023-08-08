@@ -17,5 +17,7 @@ export default class ModalWindow {
 
     init() {
         this._setBtnCloseEvent();
+
+        return this;
     }
 }

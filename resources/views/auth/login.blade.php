@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="mx-auto w-50">
-  <h3 class="mb-5">Вход</h3>
+  <h3 class="mb-2">Вход</h3>
   <form id="form-login">
       <div class="mb-3">
         <label for="login" class="form-label">Логин</label>

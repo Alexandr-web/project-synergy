@@ -18,6 +18,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.1",
+        "codepage": "^1.15.0",
         "sass": "^1.64.2",
         "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
     }
