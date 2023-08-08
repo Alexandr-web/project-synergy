@@ -35,6 +35,14 @@ export default class ValidForm {
         return value instanceof File;
     }
 
+    isNumber(value) {
+        return !Object.is(Number(value), NaN);
+    }
+
+    lettersOnly(value) {
+        return value.split("").every((l) => !this.isNumber(l) || /\s/.test(l));
+    }
+
     _getOptionsExceptTypeFile() {
         return Object
             .keys(this.options)
@@ -70,21 +78,29 @@ export default class ValidForm {
         const res = {};
 
         for (const option in options) {
+            const optVal = options[option];
+
             switch (option) {
                 case "min":
-                    res[option] = this.checkMin(options[option], value);
+                    res[option] = this.checkMin(optVal, value);
                     break;
                 case "max":
-                    res[option] = this.checkMax(options[option], value);
+                    res[option] = this.checkMax(optVal, value);
                     break;
                 case "equal":
-                    res[option] = this.checkEqual(options[option], value);
+                    res[option] = this.checkEqual(optVal, value);
                     break;
                 case "email":
                     res[option] = this.checkEmail(value);
                     break;
                 case "file":
                     res[option] = this.isFile(value);
+                    break;
+                case "numberOnly":
+                    res[option] = this.isNumber(value);
+                    break;
+                case "lettersOnly":
+                    res[option] = this.lettersOnly(value);
                     break;
             }
         }
