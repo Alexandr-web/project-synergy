@@ -5,14 +5,14 @@
 @section('content')
     <div class="w-75 mx-auto">
         <h2>Общая информация</h2>
-        <div class="accordion" id="accordionExample">
+        <div class="accordion">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-tab-target="tab-id-0">
+                <button class="accordion-button collapsed" type="button" data-tab-target="tab-id-0">
                   Яковлев Александр Николаевич
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-tab-body="tab-id-0">
+              <div class="accordion-collapse collapse" data-tab-body="tab-id-0">
                 <div class="accordion-body">
                     <ul class="list-group">
                         <li class="list-group-item d-flex align-items-center justify-content-between">
