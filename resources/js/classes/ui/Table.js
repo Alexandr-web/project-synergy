@@ -47,7 +47,7 @@ export default class Table {
 
                 const data = new Uint8Array(reader.result);
                 const wb = xlsx.read(data, { type: "array", });
-                const htmlStr = xlsx.write(wb, { type: "binary", bookType: "html", });
+                const htmlStr = xlsx.write(wb, { type: "string", bookType: "html", });
                 const table = this._getElementTable(htmlStr);
 
                 this.table.innerHTML = table.innerHTML;

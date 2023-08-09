@@ -1,7 +1,7 @@
 import loadFiles from "./loadFiles";
 import tabs from "./tabs";
 
-(function () {
+window.addEventListener("load", () => {
     loadFiles();
     tabs();
-}());
+});

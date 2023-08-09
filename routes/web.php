@@ -17,6 +17,10 @@ Route::prefix('auth')->group(function () {
     Route::view('/login', 'auth.login');
 });
 
+Route::prefix('boss')->group(function () {
+    Route::view('/', 'boss.index');
+});
+
 Route::prefix('employee')->group(function () {
     Route::view('/', 'employee.index');
     Route::view('/documents', 'employee.documents');

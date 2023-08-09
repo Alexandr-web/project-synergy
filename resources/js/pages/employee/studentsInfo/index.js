@@ -1,5 +1,5 @@
 import table from "./table";
 
-(function () {
+window.addEventListener("load", () => {
     table();
-}());
+});

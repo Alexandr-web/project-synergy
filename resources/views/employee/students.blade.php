@@ -188,19 +188,20 @@
                       <table id="development-prospects-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th>Направление:</th>
-                            <th>Подразделение:</th>
-                            <th>Приоритет сохранения:</th>
+                            <th data-target-answer="0" data-question="Направление:">Направление:</th>
+                            <th data-target-answer="1" data-question="Подразделение:">Подразделение:</th>
+                            <th data-target-answer="2" data-question="Приоритет сохранения:">Приоритет сохранения:</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>Что-то</td>
-                            <td>Что-нибудь</td>
-                            <td>Да</td>
+                            <td data-answer="Что-то" data-answer-id="0" contenteditable="">Что-то</td>
+                            <td data-answer="Что-нибудь" data-answer-id="1" contenteditable="">Что-нибудь</td>
+                            <td data-answer="Да" data-answer-id="2" contenteditable="">Да</td>
                           </tr>
                         </tbody>
                       </table>
+                      <button class="btn btn-outline-primary d-block mx-auto mt-3" id="btn-save-development-prospects-table">Сохранить</button>
                     </td>
                   </tr>
                </table>
@@ -418,21 +419,22 @@
                       <table id="sport-achievements-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th>Название мероприятия:</th>
-                            <th>Результат:</th>
+                            <th data-question="Название мероприятия:" data-target-answer="0">Название мероприятия:</th>
+                            <th data-question="Результат:" data-target-answer="1">Результат:</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td data-column-name="event-name" contenteditable="">Что-то</td>
-                            <td data-column-name="event-result" contenteditable="">Что-нибудь</td>
+                            <td data-answer="Что-то" data-answer-id="0" contenteditable="">Что-то</td>
+                            <td data-answer="Что-нибудь" data-answer-id="0" contenteditable="">Что-нибудь</td>
                           </tr>
                           <tr>
-                            <td data-column-name="event-name" contenteditable="">Что-то 2</td>
-                            <td data-column-name="event-result" contenteditable="">Что-нибудь 2</td>
+                            <td data-answer="Что-то" data-answer-id="1" contenteditable="">Что-то 2</td>
+                            <td data-answer="Что-нибудь" data-answer-id="1" contenteditable="">Что-нибудь 2</td>
                           </tr>
                         </tbody>
                       </table>
+                      <button class="btn btn-outline-primary d-block mx-auto mt-3" id="btn-save-sport-achievements-table">Сохранить</button>
                     </td>
                   </tr>
                   <tr>
@@ -441,21 +443,22 @@
                       <table id="art-skills-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th>Навыки на момент поступления:</th>
-                            <th>Развитие на программе:</th>
+                            <th data-question="Навыки на момент поступления:" data-target-answer="0">Навыки на момент поступления:</th>
+                            <th data-question="Развитие на программе:" data-target-answer="1">Развитие на программе:</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td data-column-name="skill-name" contenteditable="">Что-то</td>
-                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь</td>
+                            <td data-answer="Что-нибудь" data-answer-id="0" contenteditable="">Что-нибудь</td>
+                            <td data-answer="Что-то" data-answer-id="0" contenteditable="">Что-то</td>
                           </tr>
                           <tr>
-                            <td data-column-name="skill-name" contenteditable="">Что-то 2</td>
-                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь 2</td>
+                            <td data-answer="Что-нибудь" data-answer-id="1" contenteditable="">Что-то 2</td>
+                            <td data-answer="Что-то" data-answer-id="1" contenteditable="">Что-нибудь 2</td>
                           </tr>
                         </tbody>
                       </table>
+                      <button class="btn btn-outline-primary d-block mx-auto mt-3" id="btn-save-art-skills-table">Сохранить</button>
                     </td>
                   </tr>
                </table>
@@ -477,21 +480,22 @@
                       <table id="corporation-achievements-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th>Название</th>
-                            <th>Описание</th>
+                            <th data-question="Название" data-target-answer="0">Название</th>
+                            <th data-question="Описание" data-target-answer="1">Описание</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td data-column-name="skill-name" contenteditable="">Что-то</td>
-                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь</td>
+                            <td data-answer="Что-то" data-answer-id="0" contenteditable="">Что-то</td>
+                            <td data-answer="Что-нибудь" data-answer-id="0" contenteditable="">Что-нибудь</td>
                           </tr>
                           <tr>
-                            <td data-column-name="skill-name" contenteditable="">Что-то 2</td>
-                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь 2</td>
+                            <td data-answer="Что-то 2" data-answer-id="1" contenteditable="">Что-то 2</td>
+                            <td data-answer="Что-нибудь 2" data-answer-id="1" contenteditable="">Что-нибудь 2</td>
                           </tr>
                         </tbody>
                       </table>
+                      <button class="btn btn-outline-primary d-block mx-auto mt-3" id="btn-save-achievements-table">Сохранить</button>
                     </td>
                   </tr>
                </table>
@@ -513,21 +517,22 @@
                       <table id="extracurricular-activities-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th>Название</th>
-                            <th>Описание</th>
+                            <th data-question="Название" data-target-answer="0">Название</th>
+                            <th data-question="Описание" data-target-answer="1">Описание</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td data-column-name="skill-name" contenteditable="">Что-то</td>
-                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь</td>
+                            <td data-answer="Что-то" data-answer-id="0" contenteditable="">Что-то</td>
+                            <td data-answer="Что-нибудь" data-answer-id="0" contenteditable="">Что-нибудь</td>
                           </tr>
                           <tr>
-                            <td data-column-name="skill-name" contenteditable="">Что-то 2</td>
-                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь 2</td>
+                            <td data-answer="Что-то 2" data-answer-id="1" contenteditable="">Что-то 2</td>
+                            <td data-answer="Что-нибудь 2" data-answer-id="1" contenteditable="">Что-нибудь 2</td>
                           </tr>
                         </tbody>
                       </table>
+                      <button class="btn btn-outline-primary d-block mx-auto mt-3" id="btn-save-extracurricular-activities-table">Сохранить</button>
                     </td>
                   </tr>
                </table>
@@ -593,9 +598,9 @@
         </div>
     </aside>
     <ul class="list-group ms-3 w-100 rounded-1">
-        <li class="js-student-btn list-group-item fs-3">Яковлев Александр Николаевич</li>
-        <li class="js-student-btn list-group-item fs-3">Иванов Иван Иванович</li>
-        <li class="js-student-btn list-group-item fs-3">Иванов Иван Иванович</li>
+        <li class="js-student-btn list-group-item fs-5">Яковлев Александр Николаевич</li>
+        <li class="js-student-btn list-group-item fs-5">Иванов Иван Иванович</li>
+        <li class="js-student-btn list-group-item fs-5">Иванов Иван Иванович</li>
     </ul>
 </div>
 @endsection

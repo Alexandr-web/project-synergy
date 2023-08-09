@@ -1,5 +1,5 @@
 import login from "./login";
 
-(function () {
+window.addEventListener("load", () => {
     login();
-}());
+});
