@@ -544,7 +544,7 @@
     </div>
   </div>
 </div>
-<nav class="navbar bg-body-tertiary rounded-1">
+<nav class="navbar bg-body-tertiary rounded-1 sticky-top">
     <div class="container-fluid">
       <form id="form-search" class="d-flex w-100" role="search">
         <input class="form-control me-2" type="text" name="search" placeholder="Поиск по ФИО" aria-label="Search">

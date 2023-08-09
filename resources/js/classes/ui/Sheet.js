@@ -49,22 +49,6 @@ export default class Sheet {
         return this;
     }
 
-    fillTable(tableData) {
-        tableData.map(({ question, answer, }) => {
-            const answerHTMLStr = answer.isText ? `<td class="w-50" data-answer="${answer}" contenteditable>${answer}</td>` : answer.inner;
-            const htmlStr = `
-            <tr>
-                <td class="w-50" data-question="${question}">${question}</td>
-                ${answerHTMLStr}
-            </tr>
-            `;
-
-            this.table.innerHTML = htmlStr;
-        });
-
-        return this;
-    }
-
     init() {
         this.setEventForBtnSave();
         this.setEventForAnswers();
