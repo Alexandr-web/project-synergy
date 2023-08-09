@@ -19,9 +19,9 @@
                 Главная
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-tab-body="tab-id-0">
+            <div class="accordion-collapse collapse show" data-tab-body="tab-id-0">
               <div class="accordion-body">
-                <table class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
+                <table id="main-student-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>ФИО</td>
                     <td>Яковлев Александр Николаевич</td>
@@ -74,9 +74,9 @@
                 Сотрудник
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-tab-body="tab-id-1">
+            <div class="accordion-collapse collapse show" data-tab-body="tab-id-1">
               <div class="accordion-body">
-                <table class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
+                <table id="employee-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>Структурное подразделение</td>
                     <td>Структурное подразделение 2313</td>
@@ -101,15 +101,15 @@
                     <td>Чек бокс</td>
                     <td>
                       <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="meeting-is-complete">
-                        <label class="form-check-label" for="meeting-is-complete">Встреча прошла успешно</label>
+                        <input type="checkbox" class="form-check-input" id="meeting-ended">
+                        <label class="form-check-label" for="meeting-ended">Встреча прошла</label>
                       </div>                    
                     </td>
                   </tr>
                   <tr>
                     <td>Характеристика от руководителя</td>
                     <td>
-                      <table class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
+                      <table id="characteristics-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                         <tr>
                           <td>1. Дата заполнения (чч.мм.гг.):</td>
                           <td>11.10.2004</td>
@@ -164,7 +164,7 @@
                   <tr>
                     <td>Обратная связь по встрече</td>
                     <td>
-                      <table class="table table-bordered m-0">
+                      <table id="meetings-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
                             <th>Выполнено:</th>
@@ -185,7 +185,7 @@
                   <tr>
                     <td>Перспективы развития</td>
                     <td>
-                      <table class="table table-bordered m-0">
+                      <table id="development-prospects-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
                             <th>Направление:</th>
@@ -198,6 +198,333 @@
                             <td>Что-то</td>
                             <td>Что-нибудь</td>
                             <td>Да</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+               </table>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-tab-target="tab-id-2">
+                Студент
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse show" data-tab-body="tab-id-2">
+              <div class="accordion-body">
+                <table id="student-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>Программы обучения</td>
+                    <td>Подгружается из АКАДЫ</td>
+                  </tr>
+                  <tr>
+                    <td>Группы обучения</td>
+                    <td>Подгружается из АКАДЫ</td>
+                  </tr>
+                  <tr>
+                    <td>Академические задолженности по каждой программе</td>
+                    <td>Подгружается из АКАДЫ</td>
+                  </tr>
+                  <tr>
+                    <td>Дипломная работа</td>
+                    <td>Подгружается вручную</td>
+                  </tr>
+                  <tr>
+                    <td>Аттестационный лист студента</td>
+                    <td>
+                      <table id="attestation-sheet-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
+                          <tr>
+                              <td>1. Дата заполнения (чч.мм.гг.):</td>
+                              <td>11.10.2004</td>
+                          </tr>
+                          <tr>
+                              <td>2. Ваше Имя Фамилия Отчество:</td>
+                              <td>Иванов Иван Иванович</td>
+                          </tr>
+                          <tr>
+                              <td>3. Структурное подразделение (Департамент):</td>
+                              <td>Департамент</td>
+                          </tr>
+                          <tr>
+                              <td>4. Ваш Курс:</td>
+                              <td>Курс</td>
+                          </tr>
+                          <tr>
+                              <td>5. Перечислите ваши измеримые достижения за отчетный период:</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>6. Какие планы вам не удалось осуществить и почему?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>7. Какие компетенции, навыки и умения вы развивали за отчетный период?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>8. Какие компетенции, навыки и умения вы собираетесь развивать в будущем периоде?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>9. Кто ваш наставник?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>10. Чему вы научились под руководством вашего наставника?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>11. Кого из ваших сокурсников вы считаете лидером, которого можно ставить в пример и равняться на него?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>12. Кто из ваших сокурсников оказался «случайным попутчиком» для программы Кадровый резерв и Корпорации?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>13. Укажите сотрудников Корпорации, от которых вы получаете ценные знания и рекомендации?:</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>14. Кого из сотрудников Корпорации вы считаете Лидером, которого можно ставить в пример и равняться на него?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>15. Какие карьерные перспективы вы перед собой видите?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>16. Какие улучшения необходимо сделать в вашем отделе, департаменте и Корпорации в целом для повышения эффективности деятельности?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>17. Какие новые продукты и услуги Клиентам вы предлагаете создать в Корпорации?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>18. Какие новые направления бизнеса вы предлагаете открыть в Корпорации?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>19. Какие улучшения в системе подготовки программы "Кадровый резерв" необходимо осуществить?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>20. Какие направления набора абитуриентов на программу "Кадровый резерв" вы считаете наиболее эффективными?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>21. Выберите направления, в которых вы видите свое дальнейшее развитие в Корпорации?</td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>22. В каком департаменте вы сможете принести Корпорации ощутимую пользу и результат </td>
+                              <td>12345</td>
+                          </tr>
+                          <tr>
+                              <td>23. Сформулируйте в свободной форме ваши предложения высшему руководству по обеспечению устойчивого развития корпорации.</td>
+                              <td>12345</td>
+                          </tr>
+                      </table>
+                    </td>
+                  </tr>
+               </table>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-tab-target="tab-id-3">
+                Документы
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse show" data-tab-body="tab-id-3">
+              <div class="accordion-body">
+                <table id="documents-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>Паспорт</td>
+                    <td>
+                      <a class="js-document-btn btn btn-outline-warning me-2" href="url-file" download="file-name" data-btn="download" data-document="passport">Скачать</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Договоры</td>
+                    <td>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <div class="w-50">
+                                Трудовой договор
+                            </div>
+                            <a class="js-document-btn btn btn-outline-warning me-2" href="url-file" download="file-name" data-btn="download" data-document="employment-contract">Скачать</a>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <div class="w-50">
+                                Договор на оказание платных услуг
+                            </div>
+                            <a class="js-document-btn btn btn-outline-warning me-2" href="url-file" download="file-name" data-btn="download" data-document="paid-services">Скачать</a>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <div class="w-50">
+                                Ученический договор
+                            </div>
+                            <a class="js-document-btn btn btn-outline-warning me-2" href="url-file" download="file-name" data-btn="download" data-document="student-agreement">Скачать</a>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <div class="w-50">
+                                Договор С3 на скидку
+                            </div>
+                            <a class="js-document-btn btn btn-outline-warning me-2" href="url-file" download="file-name" data-btn="download" data-document="contract-c3">Скачать</a>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+               </table>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-tab-target="tab-id-3">
+                Служба режима
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse show" data-tab-body="tab-id-3">
+              <div class="accordion-body">
+                <table id="mode-service-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>Характеристика от службы режима</td>
+                    <td>
+                      Подгружается вручную
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Рапорта</td>
+                    <td>
+                      Подгружается вручную
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>СЗ</td>
+                    <td>
+                      Подгружается вручную
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Спортивные достижения</td>
+                    <td>
+                      <table id="sport-achievements-table" class="table table-bordered m-0">
+                        <thead>
+                          <tr>
+                            <th>Название мероприятия:</th>
+                            <th>Результат:</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-column-name="event-name" contenteditable="">Что-то</td>
+                            <td data-column-name="event-result" contenteditable="">Что-нибудь</td>
+                          </tr>
+                          <tr>
+                            <td data-column-name="event-name" contenteditable="">Что-то 2</td>
+                            <td data-column-name="event-result" contenteditable="">Что-нибудь 2</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Творческие способности</td>
+                    <td>
+                      <table id="art-skills-table" class="table table-bordered m-0">
+                        <thead>
+                          <tr>
+                            <th>Навыки на момент поступления:</th>
+                            <th>Развитие на программе:</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-column-name="skill-name" contenteditable="">Что-то</td>
+                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь</td>
+                          </tr>
+                          <tr>
+                            <td data-column-name="skill-name" contenteditable="">Что-то 2</td>
+                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь 2</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+               </table>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-tab-target="tab-id-4">
+                Достижения
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse show" data-tab-body="tab-id-4">
+              <div class="accordion-body">
+                <table id="achievements-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>В рамках копрорации</td>
+                    <td>
+                      <table id="corporation-achievements-table" class="table table-bordered m-0">
+                        <thead>
+                          <tr>
+                            <th>Название</th>
+                            <th>Описание</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-column-name="skill-name" contenteditable="">Что-то</td>
+                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь</td>
+                          </tr>
+                          <tr>
+                            <td data-column-name="skill-name" contenteditable="">Что-то 2</td>
+                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь 2</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+               </table>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-tab-target="tab-id-5">
+                Волонтерство
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse show" data-tab-body="tab-id-5">
+              <div class="accordion-body">
+                <table id="volunteering-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>Участие во внеучебной деятельности</td>
+                    <td>
+                      <table id="extracurricular-activities-table" class="table table-bordered m-0">
+                        <thead>
+                          <tr>
+                            <th>Название</th>
+                            <th>Описание</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-column-name="skill-name" contenteditable="">Что-то</td>
+                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь</td>
+                          </tr>
+                          <tr>
+                            <td data-column-name="skill-name" contenteditable="">Что-то 2</td>
+                            <td data-column-name="skill-progress" contenteditable="">Что-нибудь 2</td>
                           </tr>
                         </tbody>
                       </table>

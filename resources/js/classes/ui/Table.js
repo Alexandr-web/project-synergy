@@ -32,6 +32,10 @@ export default class Table {
     }
 
     _setEventForUploadInput() {
+        if (!this.inputUpload) {
+            return;
+        }
+
         this.inputUpload.addEventListener("change", (e) => {
             const reader = new FileReader();
 
