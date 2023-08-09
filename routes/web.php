@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/auth/login', 'auth.login');
-Route::view('/boss', 'boss');
+Route::prefix('auth')->group(function () {
+    Route::view('/login', 'auth.login');
+});
 
 Route::prefix('employee')->group(function () {
     Route::view('/', 'employee.index');
@@ -24,4 +25,6 @@ Route::prefix('employee')->group(function () {
     Route::view('/students', 'employee.students');
 });
 
-Route::view('/student', 'student');
+Route::prefix('student')->group(function () {
+    Route::view('/', 'student.index');
+});
