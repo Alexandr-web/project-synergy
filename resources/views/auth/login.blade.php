@@ -3,6 +3,7 @@
 @section('title', 'Вход')
 
 @section('content')
+<x-alert />
 <div class="mx-auto w-50">
   <h3 class="mb-2">Вход</h3>
   <form id="form-login">

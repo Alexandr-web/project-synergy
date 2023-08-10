@@ -1,7 +1,9 @@
 import ValidForm from "../../classes/ui/ValidForm";
 import Auth from "../../classes/request/Auth";
+import Alert from "../../classes/ui/Alert";
 
 export default () => {
+    const alert = new Alert().init();
     const options = {
         login: {
             min: 6,
@@ -14,11 +16,16 @@ export default () => {
     const callbackWhenAllCompleted = (fd) => {
         new Auth()
             .login(fd)
-            .then((data) => console.log(data))
-            .catch((err) => {
+            .then((data) => {
+                console.log(data);
+                alert.show("success", "Вход выполнен успешно!");
+            }).catch((err) => {
                 throw err;
             });
     };
+    const callbackWhenFailed = () => {
+        alert.show("error", "Все поля должны быть заполнены правильно");
+    };
 
-    new ValidForm("#form-login", options, callbackWhenAllCompleted).init();
+    new ValidForm("#form-login", options, callbackWhenAllCompleted, callbackWhenFailed).init();
 };

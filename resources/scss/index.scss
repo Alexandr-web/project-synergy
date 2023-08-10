@@ -3,3 +3,10 @@
 .modal {
     background: rgba($dark, .5);
 }
+
+.alert {
+    top: 15px;
+    right: 15px;
+    width: 350px;
+    z-index: 9999999999999;
+}

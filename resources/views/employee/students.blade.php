@@ -188,9 +188,9 @@
                       <table id="development-prospects-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th data-target-answer="0" data-question="Направление:">Направление:</th>
-                            <th data-target-answer="1" data-question="Подразделение:">Подразделение:</th>
-                            <th data-target-answer="2" data-question="Приоритет сохранения:">Приоритет сохранения:</th>
+                            <th data-target-answer="0" data-question-head="" data-question="Направление:">Направление:</th>
+                            <th data-target-answer="1" data-question-head="" data-question="Подразделение:">Подразделение:</th>
+                            <th data-target-answer="2" data-question-head="" data-question="Приоритет сохранения:">Приоритет сохранения:</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -419,8 +419,8 @@
                       <table id="sport-achievements-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th data-question="Название мероприятия:" data-target-answer="0">Название мероприятия:</th>
-                            <th data-question="Результат:" data-target-answer="1">Результат:</th>
+                            <th data-question="Название мероприятия:" data-question-head="" data-target-answer="0">Название мероприятия:</th>
+                            <th data-question="Результат:" data-question-head="" data-target-answer="1">Результат:</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -443,8 +443,8 @@
                       <table id="art-skills-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th data-question="Навыки на момент поступления:" data-target-answer="0">Навыки на момент поступления:</th>
-                            <th data-question="Развитие на программе:" data-target-answer="1">Развитие на программе:</th>
+                            <th data-question="Навыки на момент поступления:" data-question-head="" data-target-answer="0">Навыки на момент поступления:</th>
+                            <th data-question="Развитие на программе:" data-question-head="" data-target-answer="1">Развитие на программе:</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -480,8 +480,8 @@
                       <table id="corporation-achievements-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th data-question="Название" data-target-answer="0">Название</th>
-                            <th data-question="Описание" data-target-answer="1">Описание</th>
+                            <th data-question="Название" data-question-head="" data-target-answer="0">Название</th>
+                            <th data-question="Описание" data-question-head="" data-target-answer="1">Описание</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -517,8 +517,8 @@
                       <table id="extracurricular-activities-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th data-question="Название" data-target-answer="0">Название</th>
-                            <th data-question="Описание" data-target-answer="1">Описание</th>
+                            <th data-question="Название" data-question-head="" data-target-answer="0">Название</th>
+                            <th data-question="Описание" data-question-head="" data-target-answer="1">Описание</th>
                           </tr>
                         </thead>
                         <tbody>

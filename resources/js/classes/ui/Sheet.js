@@ -17,6 +17,7 @@ export default class Sheet {
         this.btnToSave.addEventListener("click", () => {
             this.questionsEls.forEach((questionEl) => {
                 const question = questionEl.dataset.question;
+                const questionIsHead = Boolean(questionEl.dataset.questionHead);
                 const answerId = questionEl.dataset.targetAnswer;
                 const answersEls = document.querySelectorAll(`[data-answer-id="${answerId}"]`);
                 const answers = [...answersEls].reduce((acc, el) => {
@@ -24,7 +25,7 @@ export default class Sheet {
                     return acc;
                 }, []);
 
-                this.data.push({ question, answers, });
+                this.data.push({ question, answers, isHead: questionIsHead, });
             });
 
             if (this.callbackAfterClick instanceof Function) {
