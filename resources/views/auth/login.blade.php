@@ -23,7 +23,7 @@
           <option value="boss">Руководитель</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary">Войти</button>
+      <button type="submit" class="btn btn-primary mx-auto d-block">Войти</button>
   </form>
 </div>
 @endsection

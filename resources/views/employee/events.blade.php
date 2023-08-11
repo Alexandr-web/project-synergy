@@ -11,7 +11,9 @@
             <input class="js-upload-table-input form-control" type="file">
         </div>
     </div>
-    <table id="event-table" class="table table-bordered" border="1" cellspacing="0" cellpadding="0"></table>
+    <div class="overflow-x-auto">
+        <table id="event-table" class="table table-bordered" border="1" cellspacing="0" cellpadding="0"></table>
+    </div>
 @endsection
 
 @section('scripts')
