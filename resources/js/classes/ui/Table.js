@@ -13,17 +13,21 @@ export default class Table {
     htmlTableToExcel() {
         const cells = this.table.querySelectorAll("td");
 
-        cells.forEach((el) => {
-            el.removeAttribute("data-v");
-            el.removeAttribute("data-t");
-            el.removeAttribute("id");
-        });
+        this._removeAttributesCells(cells);
 
         const updatedTable = document.querySelector(this.selectorTable);
         const file = xlsx.utils.table_to_book(updatedTable);
 
         xlsx.write(file, { bookType: "xlsx", bookSST: true, type: "base64", });
         xlsx.writeFile(file, "file.xlsx", { bookSST: true, type: "base64", });
+    }
+
+    _removeAttributesCells(cells) {
+        cells.forEach((el) => {
+            el.removeAttribute("data-v");
+            el.removeAttribute("data-t");
+            el.removeAttribute("id");
+        });
     }
 
     _setEventForBtnDownload() {

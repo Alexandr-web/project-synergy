@@ -40,28 +40,16 @@ export default class ValidForm {
     }
 
     lettersOnly(value) {
-        return /^[\sа-я\s]*$/i.test(value);
+        return /^[\s|а-я|\s|a-z]+$/i.test(value);
     }
 
-    _getOptionsExceptTypeFile() {
-        return Object
-            .keys(this.options)
-            .filter((n) => this._getElementByName(n).type !== "file")
-            .reduce((acc, name) => {
-                acc.push({
-                    name,
-                    element: this._getElementByName(name),
-                    options: this.options[name],
-                });
-
-                return acc;
-            }, []);
+    _getElementsFromOptions() {
+        return Object.keys(this.options).map((name) => this._getElementByName(name));
     }
 
-    _getOptionsOnlyWithTypeFile() {
-        return Object
-            .keys(this.options)
-            .filter((n) => this._getElementByName(n).type === "file")
+    _getOptions(onlyTypeFile = false) {
+        return Object.keys(this.options)
+            .filter((name) => (this._getElementByName(name).type === "file" && onlyTypeFile) || !onlyTypeFile)
             .reduce((acc, name) => {
                 acc.push({
                     name,
@@ -177,25 +165,25 @@ export default class ValidForm {
     }
 
     _setEventInputs() {
-        this._getOptionsExceptTypeFile().forEach(({ name, element, options, }) => {
+        this._getOptions().forEach(({ name, element, options, }) => {
             element.addEventListener("input", this._checkValueInput.bind(this, element, name, options));
             element.addEventListener("blur", this._checkValueInput.bind(this, element, name, options));
         });
 
-        this._getOptionsOnlyWithTypeFile().forEach(({ name, element, options, }) => {
+        this._getOptions(true).forEach(({ name, element, options, }) => {
             element.addEventListener("change", (e) => this._checkValueFile(name, options, e));
         });
     }
 
-    _setEventForm() {
+    _setEventSubmitForm() {
         this.form.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            this._getOptionsExceptTypeFile().forEach(({ name, element, options, }) => {
+            this._getOptions().forEach(({ name, element, options, }) => {
                 this._checkValueInput(element, name, options);
             });
 
-            this._getOptionsOnlyWithTypeFile().forEach(({ name, options, }) => {
+            this._getOptions(true).forEach(({ name, options, }) => {
                 if (options.optional) {
                     this._inputIsComplete(name);
                 }
@@ -211,8 +199,18 @@ export default class ValidForm {
         });
     }
 
+    _setEventResetForm() {
+        this.form.addEventListener("reset", () => {
+            this._getOptions().map(({ element, }) => {
+                element.classList.remove(this.validClassName);
+                element.classList.remove(this.invalidClassName);
+            });
+        });
+    }
+
     init() {
         this._setEventInputs();
-        this._setEventForm();
+        this._setEventSubmitForm();
+        this._setEventResetForm();
     }
 }

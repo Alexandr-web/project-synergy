@@ -1,6 +1,7 @@
 import ValidForm from "../../classes/ui/ValidForm";
 import Auth from "../../classes/request/Auth";
 import Alert from "../../classes/ui/Alert";
+import Route from "../../classes/ui/Route";
 
 export default () => {
     const alert = new Alert().init();
@@ -17,8 +18,9 @@ export default () => {
         new Auth()
             .login(fd)
             .then((data) => {
-                console.log(data);
                 alert.show("success", "Вход выполнен успешно!");
+
+                new Route().redirect();
             }).catch((err) => {
                 throw err;
             });
