@@ -3,6 +3,7 @@
 @section('title', 'Общая информация')
 
 @section('content')
+    <x-alert />
     <div class="w-75 mx-auto">
         <h2>Общая информация</h2>
         <div class="accordion">

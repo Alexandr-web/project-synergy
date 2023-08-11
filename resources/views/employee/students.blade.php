@@ -3,6 +3,7 @@
 @section('title', 'Студенты')
 
 @section('content')
+<x-alert />
 <h2>Список студентов</h2>
 <div class="modal" tabindex="-1">
   <div class="modal-dialog" style="max-width: 50%">

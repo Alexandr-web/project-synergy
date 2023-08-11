@@ -10,8 +10,6 @@ export default () => {
     const modalWindow = new ModalWindow().init();
 
     studentsList.forEach((btn) => {
-        btn.addEventListener("dblclick", () => {
-            modalWindow.show();
-        });
+        btn.addEventListener("dblclick", modalWindow.show.bind(modalWindow));
     });
 };

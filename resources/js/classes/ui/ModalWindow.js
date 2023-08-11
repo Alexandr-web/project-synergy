@@ -1,5 +1,5 @@
 export default class ModalWindow {
-    constructor(selectorModalWindow = ".modal", selectorBtnClose = ".btn-close", classNameForOpen = "d-block") {
+    constructor(selectorModalWindow = ".modal", selectorBtnClose = ".modal .btn-close", classNameForOpen = "d-block") {
         this.modalWindow = document.querySelector(selectorModalWindow);
         this.btnClose = document.querySelector(selectorBtnClose);
         this.classNameForOpen = classNameForOpen;

@@ -3,6 +3,7 @@
 @section('title', 'Главная')
 
 @section('content')
+<x-alert />
 <h4 class="text-center">Аттестационный лист студента программы "Кадровый резерв"</h4>
 <table id="attestation-sheet-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
     <tr>
