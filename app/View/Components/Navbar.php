@@ -9,12 +9,14 @@ use Illuminate\View\Component;
 class Navbar extends Component
 {
     public string $role = '';
+    public int $id;
 
     /**
      * Create a new component instance.
      */
-    public function __construct(string $role = 'employee')
+    public function __construct(int $id, string $role)
     {
+        $this->id = $id;
         $this->role = $role;
     }
 

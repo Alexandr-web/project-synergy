@@ -32,7 +32,7 @@
 
     $list_for_student = [
         [
-            'route' => '/attestation-list',
+            'route' => "/students/$id/attestation-sheet",
             'name' => 'Аттестационный лист',
             'role' => 'student',
         ]

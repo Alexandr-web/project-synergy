@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'Главная')
+@section('title', 'Сотрудники')
 
 @section('content')
 <x-alert />
