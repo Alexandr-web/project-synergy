@@ -13,4 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'start');
+Route::prefix('auth')->group(function () {
+    Route::view('/login', 'auth.login');
+});
+
+Route::prefix('boss')->group(function () {
+    Route::view('/', 'boss.index');
+});
+
+Route::prefix('employee')->group(function () {
+    Route::view('/documents', 'employee.documents');
+    Route::view('/events', 'employee.events');
+    Route::view('/students-info', 'employee.studentsInfo');
+    Route::view('/students', 'employee.students');
+});
+
+Route::prefix('student')->group(function () {
+    Route::view('/', 'student.index');
+});

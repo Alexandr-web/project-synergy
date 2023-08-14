@@ -1,3 +1,6 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
 *,
 *::after,
 *::before {
@@ -13,4 +16,8 @@
 img {
     max-width: 100%;
     height: auto;
+}
+
+p {
+    margin: 0;
 }

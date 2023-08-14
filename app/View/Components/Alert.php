@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class AttestationSheet extends Component
+class Alert extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class AttestationSheet extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.attestation-sheet');
+        return view('components.alert');
     }
 }

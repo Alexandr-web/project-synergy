@@ -17,7 +17,9 @@
         "vite": "^4.4.8"
     },
     "dependencies": {
-        "bootstrap": "^3.4.1",
-        "sass": "^1.64.2"
+        "bootstrap": "^5.3.1",
+        "codepage": "^1.15.0",
+        "sass": "^1.64.2",
+        "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
     }
 }
