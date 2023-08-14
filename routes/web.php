@@ -22,7 +22,6 @@ Route::prefix('boss')->group(function () {
 });
 
 Route::prefix('employee')->group(function () {
-    Route::view('/', 'employee.index');
     Route::view('/documents', 'employee.documents');
     Route::view('/events', 'employee.events');
     Route::view('/students-info', 'employee.studentsInfo');

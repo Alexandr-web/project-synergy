@@ -1,5 +1,5 @@
-import openModalWindow from "./openModalWindow";
+import openModalWindowByClick from "../../scripts/openModalWindowByClick";
 
 window.addEventListener("load", () => {
-    openModalWindow();
+    openModalWindowByClick(".js-employee-btn");
 });

@@ -10,9 +10,7 @@ export default () => {
             min: 6,
             max: 16,
         },
-        password: {
-            min: 8,
-        },
+        password: { min: 8, },
     };
     const callbackWhenAllCompleted = (fd) => {
         new Auth()

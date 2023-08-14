@@ -1,5 +1,6 @@
 export default class ValidForm {
     constructor(selectorForm, options, callbackWhenAllCompleted, callbackWhenFailed) {
+        this.selectorForm = selectorForm;
         this.options = options;
         this.validClassName = "is-valid";
         this.invalidClassName = "is-invalid";
@@ -12,7 +13,7 @@ export default class ValidForm {
     }
 
     _getElementByName(name) {
-        return document.querySelector(`[name=${name}]`);
+        return document.querySelector(`${this.selectorForm} [name=${name}]`);
     }
 
     checkMin(min, value) {
@@ -192,7 +193,9 @@ export default class ValidForm {
             this._checkAllStatesOnCompleted();
 
             if (this.allComplete) {
-                this.callbackWhenAllCompleted instanceof Function && this.callbackWhenAllCompleted(new FormData(this.form));
+                const fd = new FormData(this.form);
+
+                this.callbackWhenAllCompleted instanceof Function && this.callbackWhenAllCompleted(fd);
             } else {
                 this.callbackWhenFailed instanceof Function && this.callbackWhenFailed(e);
             }
@@ -204,6 +207,11 @@ export default class ValidForm {
             this._getOptions().map(({ element, }) => {
                 element.classList.remove(this.validClassName);
                 element.classList.remove(this.invalidClassName);
+
+                this.completeNames = [];
+                this.failedNames = [];
+
+                this.allComplete = false;
             });
         });
     }

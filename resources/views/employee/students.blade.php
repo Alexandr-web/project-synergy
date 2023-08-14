@@ -21,7 +21,7 @@
               </button>
             </h2>
             <div class="accordion-collapse collapse show" data-tab-body="tab-id-0">
-              <div class="accordion-body">
+              <div class="accordion-body overflow-x-auto">
                 <table id="main-student-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>ФИО</td>
@@ -76,7 +76,7 @@
               </button>
             </h2>
             <div class="accordion-collapse collapse show" data-tab-body="tab-id-1">
-              <div class="accordion-body">
+              <div class="accordion-body overflow-x-auto">
                 <table id="employee-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>Структурное подразделение</td>
@@ -216,7 +216,7 @@
               </button>
             </h2>
             <div class="accordion-collapse collapse show" data-tab-body="tab-id-2">
-              <div class="accordion-body">
+              <div class="accordion-body overflow-x-auto">
                 <table id="student-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>Программы обучения</td>
@@ -344,7 +344,7 @@
               </button>
             </h2>
             <div class="accordion-collapse collapse show" data-tab-body="tab-id-3">
-              <div class="accordion-body">
+              <div class="accordion-body overflow-x-auto">
                 <table id="documents-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>Паспорт</td>
@@ -394,7 +394,7 @@
               </button>
             </h2>
             <div class="accordion-collapse collapse show" data-tab-body="tab-id-3">
-              <div class="accordion-body">
+              <div class="accordion-body overflow-x-auto">
                 <table id="mode-service-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>Характеристика от службы режима</td>
@@ -473,7 +473,7 @@
               </button>
             </h2>
             <div class="accordion-collapse collapse show" data-tab-body="tab-id-4">
-              <div class="accordion-body">
+              <div class="accordion-body overflow-x-auto">
                 <table id="achievements-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>В рамках копрорации</td>
@@ -510,7 +510,7 @@
               </button>
             </h2>
             <div class="accordion-collapse collapse show" data-tab-body="tab-id-5">
-              <div class="accordion-body">
+              <div class="accordion-body overflow-x-auto">
                 <table id="volunteering-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>Участие во внеучебной деятельности</td>

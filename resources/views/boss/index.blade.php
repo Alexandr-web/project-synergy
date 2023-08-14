@@ -5,8 +5,8 @@
 @section('content')  
 <h4 class="text-center">Перечень ваших сотрудников</h4>
 <ul class="list-group ms-3 w-100 rounded-1">
-    <li class="js-student-btn list-group-item fs-5">Яковлев Александр Николаевич</li>
-    <li class="js-student-btn list-group-item fs-5">Иванов Иван Иванович</li>
+    <li class="js-employee-btn list-group-item fs-5">Яковлев Александр Николаевич</li>
+    <li class="js-employee-btn list-group-item fs-5">Иванов Иван Иванович</li>
 </ul>
 <div class="modal" tabindex="-1">
     <div class="modal-dialog" style="max-width: 50%">
@@ -22,7 +22,7 @@
                     <button class="accordion-button" type="button" data-tab-target="tab-id-0">Характеристика от руководителя</button>
                   </h2>
                   <div class="accordion-collapse collapse show" data-tab-body="tab-id-0">
-                    <div class="accordion-body">
+                    <div class="accordion-body overflow-x-auto">
                         <table id="characteristics-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                             <tr>
                               <td data-question="Дата заполнения (чч.мм.гг.):" data-target-answer="0">Дата заполнения (чч.мм.гг.):</td>
@@ -79,10 +79,10 @@
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-tab-target="tab-id-1">Характеристика от руководителя</button>
+                    <button class="accordion-button" type="button" data-tab-target="tab-id-1">Итоги встречи</button>
                   </h2>
                   <div class="accordion-collapse collapse show" data-tab-body="tab-id-1">
-                    <div class="accordion-body">
+                    <div class="accordion-body overflow-x-auto">
                         <table id="meetings-results-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                           <thead>
                               <tr>
@@ -108,7 +108,7 @@
                       <button class="accordion-button" type="button" data-tab-target="tab-id-2">Итоги предыдущей встречи</button>
                     </h2>
                     <div class="accordion-collapse collapse show" data-tab-body="tab-id-2">
-                      <div class="accordion-body">
+                      <div class="accordion-body overflow-x-auto">
                           <table id="prev-meetings-results-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                             <thead>
                                 <tr>

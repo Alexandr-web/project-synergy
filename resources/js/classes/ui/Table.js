@@ -10,7 +10,7 @@ export default class Table {
         this.selectorTable = selectorTable;
     }
 
-    htmlTableToExcel() {
+    _htmlTableToExcel() {
         const cells = this.table.querySelectorAll("td");
 
         this._removeAttributesCells(cells);
@@ -35,7 +35,7 @@ export default class Table {
             return;
         }
 
-        this.btnDownload.addEventListener("click", this.htmlTableToExcel.bind(this));
+        this.btnDownload.addEventListener("click", this._htmlTableToExcel.bind(this));
     }
 
     _getElementTable(htmlResult) {

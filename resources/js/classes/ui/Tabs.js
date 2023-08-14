@@ -26,14 +26,18 @@ export default class Tabs {
         this._changeView(this.data[findIdxTab]);
     }
 
+    _whenOpenTab(btn, body) {
+        btn.classList.remove("collapsed");
+        body.classList.add("show");
+    }
+
+    _whenCloseTab(btn, body) {
+        btn.classList.add("collapsed");
+        body.classList.remove("show");
+    }
+
     _changeView({ body, btn, show, }) {
-        if (show) {
-            btn.classList.remove("collapsed");
-            body.classList.add("show");
-        } else {
-            btn.classList.add("collapsed");
-            body.classList.remove("show");
-        }
+        show ? this._whenOpenTab(btn, body) : this._whenCloseTab(btn, body);
     }
 
     _setEventBtns() {
