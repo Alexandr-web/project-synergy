@@ -9,7 +9,6 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <x-navbar />
     <main class="p-3">
         <div class="container">
             @yield('content')

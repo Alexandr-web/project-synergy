@@ -17,17 +17,14 @@ Route::prefix('auth')->group(function () {
     Route::view('/login', 'auth.login');
 });
 
-Route::prefix('boss')->group(function () {
-    Route::view('/', 'boss.index');
+Route::prefix('students')->group(function () {
+    Route::view('/', 'students.index');
+    Route::view('/documents', 'students.documents');
+    Route::view('/info', 'students.info');
+    Route::view('/{id}/attestation-sheet', 'students.attestation-sheet')
+        ->where('id', '[0-9]+');
 });
 
-Route::prefix('employee')->group(function () {
-    Route::view('/documents', 'employee.documents');
-    Route::view('/events', 'employee.events');
-    Route::view('/students-info', 'employee.studentsInfo');
-    Route::view('/students', 'employee.students');
-});
-
-Route::prefix('student')->group(function () {
-    Route::view('/', 'student.index');
-});
+Route::view('/employees', 'employees');
+Route::view('/events', 'events');
+Route::view('/', 'index');
