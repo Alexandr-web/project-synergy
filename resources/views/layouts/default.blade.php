@@ -16,5 +16,6 @@
         </div>
     </main>
     @yield('scripts')
+    @vite(['resources/js/scripts/deleteJWTFromCookie.js'])
 </body>
 </html>

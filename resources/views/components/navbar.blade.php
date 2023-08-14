@@ -65,7 +65,7 @@
           </li>
           @endforeach
           <li class="nav-item ms-auto">
-            <button class="btn text-danger">Выйти</button>
+            <button id="logout-btn" class="btn text-danger">Выйти</button>
           </li>
         </ul>
       </div>
