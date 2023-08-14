@@ -1,3 +1,26 @@
+<?php
+  $nav_list = [
+    [
+      'route' => '/employee/documents',
+      'name' => 'Общая информация'
+    ],
+    [
+      'route' => '/employee/events',
+      'name' => 'План мероприятий'
+    ],
+    [
+      'route' => '/employee/students-info',
+      'name' => 'Движение студентов'
+    ],
+    [
+      'route' => '/employee/students',
+      'name' => 'Студенты'
+    ]
+  ];
+?>
+
+@include('includes.isActiveRoute')
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,18 +36,11 @@
         <div class="container-fluid">
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
+              @foreach ($nav_list as $item)
               <li class="nav-item">
-                <a class="nav-link" href="/employee/documents">Общая информация</a>
+                <a class="nav-link {{ isActiveRoute(preg_replace('/^\//', '', $item['route'])) }}" href="{{ $item['route'] }}">{{ $item['name'] }}</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/employee/events">План мероприятий</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/employee/students-info">Движение студентов</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/employee/students">Студенты</a>
-              </li>
+              @endforeach
             </ul>
           </div>
         </div>
