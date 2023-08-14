@@ -1,4 +1,5 @@
 import xlsx from "xlsx";
+import Alert from "./Alert";
 
 export default class Table {
     constructor(selectorTable, selectorBtnDownload, selectorBtnSave, selectorInputUpload) {
@@ -7,6 +8,7 @@ export default class Table {
         this.btnSave = document.querySelector(selectorBtnSave);
         this.inputUpload = document.querySelector(selectorInputUpload);
 
+        this.alert = new Alert().init();
         this.selectorTable = selectorTable;
     }
 
@@ -58,13 +60,15 @@ export default class Table {
 
         this.inputUpload.addEventListener("change", (e) => {
             const reader = new FileReader();
+            const file = e.target.files[0];
 
-            reader.readAsArrayBuffer(e.target.files[0]);
+            if (file.type !== "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
+                this.alert.show("error", "Файл с таким расширением не поддерживается");
+            }
+
+            reader.readAsArrayBuffer(file);
 
             reader.addEventListener("load", () => {
-                this.inputUpload.classList.add("is-valid");
-                this.inputUpload.classList.remove("is-invalid");
-
                 const data = new Uint8Array(reader.result);
                 const wb = xlsx.read(data, { type: "array", });
                 const htmlStr = xlsx.write(wb, { type: "string", bookType: "html", });
@@ -74,9 +78,6 @@ export default class Table {
             });
 
             reader.addEventListener("error", () => {
-                this.inputUpload.classList.remove("is-valid");
-                this.inputUpload.classList.add("is-invalid");
-
                 throw reader.error;
             });
         });
