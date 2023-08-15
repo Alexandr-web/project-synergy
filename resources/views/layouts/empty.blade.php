@@ -1,5 +1,3 @@
-@include('includes.getTokenData')
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -11,13 +9,11 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <x-navbar role="{{ getTokenData()['role'] }}" id="{{ getTokenData()['data_user']['id'] }}" />
     <main class="p-3">
         <div class="container">
             @yield('content')
         </div>
     </main>
     @yield('scripts')
-    @vite(['resources/js/scripts/deleteJWTFromCookie.js'])
 </body>
 </html>

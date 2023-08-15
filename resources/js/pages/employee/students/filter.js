@@ -18,6 +18,10 @@ export default () => {
             min: 3,
             optional: true,
         },
+        status: { optional: true, },
+        education: { optional: true, },
+        foreigner: { optional: true, },
+        "meeting-is-complete": { optional: true, },
     };
     const callbackWhenAllCompleted = (fd) => {
         console.log("All completed!", fd);

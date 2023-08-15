@@ -29,9 +29,11 @@ export default class Request {
             "X-Requested-With": "XMLHttpRequest",
             "X-CSRF-TOKEN": this.CSRF_TOKEN,
         };
-        const config = { method, headers, };
-
-        config.body = this._getBodyLength(body) ? body : undefined;
+        const config = {
+            method,
+            headers,
+            body: this._getBodyLength(body) ? body : undefined,
+        };
 
         return fetch(url, config)
             .then((data) => data.json())

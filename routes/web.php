@@ -14,20 +14,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('auth')->group(function () {
-    Route::view('/login', 'auth.login');
+    Route::view('/login', 'auth.login')
+        ->middleware('redirect_if_token_exist');
 });
 
-Route::prefix('boss')->group(function () {
-    Route::view('/', 'boss.index');
+Route::prefix('students')->group(function () {
+    Route::view('/', 'students.index')
+        ->middleware('redirect_if_token_not_exist')
+        ->middleware('role_must_be:employee');
+
+    Route::view('/documents', 'students.documents')
+        ->middleware('redirect_if_token_not_exist')
+        ->middleware('role_must_be:employee');
+
+    Route::view('/info', 'students.info')
+        ->middleware('redirect_if_token_not_exist')
+        ->middleware('role_must_be:employee');
+
+    Route::view('/{id}/attestation-sheet', 'students.attestation-sheet')
+        ->where('id', '[0-9]+')
+        ->middleware('redirect_if_token_not_exist')
+        ->middleware('role_must_be:student');
 });
 
-Route::prefix('employee')->group(function () {
-    Route::view('/documents', 'employee.documents');
-    Route::view('/events', 'employee.events');
-    Route::view('/students-info', 'employee.studentsInfo');
-    Route::view('/students', 'employee.students');
-});
+Route::view('/employees', 'employees')
+    ->middleware('redirect_if_token_not_exist')
+    ->middleware('role_must_be:boss');
 
-Route::prefix('student')->group(function () {
-    Route::view('/', 'student.index');
-});
+Route::view('/events', 'events')
+    ->middleware('redirect_if_token_not_exist')
+    ->middleware('role_must_be:employee');
+
+Route::view('/', 'index')
+    ->middleware('redirect_if_token_not_exist');

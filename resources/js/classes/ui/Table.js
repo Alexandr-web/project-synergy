@@ -1,4 +1,6 @@
 import xlsx from "xlsx";
+import Alert from "./Alert";
+import NothingText from "./NothingText";
 
 export default class Table {
     constructor(selectorTable, selectorBtnDownload, selectorBtnSave, selectorInputUpload) {
@@ -7,6 +9,8 @@ export default class Table {
         this.btnSave = document.querySelector(selectorBtnSave);
         this.inputUpload = document.querySelector(selectorInputUpload);
 
+        this.alert = new Alert().init();
+        this.nothingText = new NothingText();
         this.selectorTable = selectorTable;
     }
 
@@ -51,6 +55,24 @@ export default class Table {
         return block.querySelector("table");
     }
 
+    _renderTable(reader) {
+        const data = new Uint8Array(reader.result);
+        const wb = xlsx.read(data, { type: "array", });
+        const htmlStr = xlsx.write(wb, { type: "string", bookType: "html", });
+        const table = this._getElementTable(htmlStr);
+
+        this.table.innerHTML = table.innerHTML;
+
+        this.alert.show("success", "Файл был успешно загружен");
+        this.nothingText.hide();
+    }
+
+    _handlerErrorByUploadFile(reader) {
+        this.alert.show("error", `Произошла ошибка при загрузке файла: "${reader.error}"`);
+
+        throw reader.error;
+    }
+
     _setEventForUploadInput() {
         if (!this.inputUpload) {
             return;
@@ -58,27 +80,16 @@ export default class Table {
 
         this.inputUpload.addEventListener("change", (e) => {
             const reader = new FileReader();
+            const file = e.target.files[0];
 
-            reader.readAsArrayBuffer(e.target.files[0]);
+            if (file.type !== "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
+                this.alert.show("error", "Файл с таким расширением не поддерживается");
+            }
 
-            reader.addEventListener("load", () => {
-                this.inputUpload.classList.add("is-valid");
-                this.inputUpload.classList.remove("is-invalid");
+            reader.readAsArrayBuffer(file);
 
-                const data = new Uint8Array(reader.result);
-                const wb = xlsx.read(data, { type: "array", });
-                const htmlStr = xlsx.write(wb, { type: "string", bookType: "html", });
-                const table = this._getElementTable(htmlStr);
-
-                this.table.innerHTML = table.innerHTML;
-            });
-
-            reader.addEventListener("error", () => {
-                this.inputUpload.classList.remove("is-valid");
-                this.inputUpload.classList.add("is-invalid");
-
-                throw reader.error;
-            });
+            reader.addEventListener("load", this._renderTable.bind(this, reader));
+            reader.addEventListener("error", this._handlerErrorByUploadFile.bind(this, reader));
         });
     }
 
