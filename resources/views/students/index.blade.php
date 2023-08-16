@@ -13,14 +13,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="accordion" id="accordionExample">
+        <div class="accordion">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-tab-target="tab-id-0">
+              <button class="accordion-button collapsed" type="button" data-tab-target="tab-id-0">
                 Главная
               </button>
             </h2>
-            <div class="accordion-collapse collapse show" data-tab-body="tab-id-0">
+            <div class="accordion-collapse collapse" data-tab-body="tab-id-0">
               <div class="accordion-body overflow-x-auto">
                 <table id="main-student-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
@@ -71,11 +71,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-tab-target="tab-id-1">
+              <button class="accordion-button collapsed" type="button" data-tab-target="tab-id-1">
                 Сотрудник
               </button>
             </h2>
-            <div class="accordion-collapse collapse show" data-tab-body="tab-id-1">
+            <div class="accordion-collapse collapse" data-tab-body="tab-id-1">
               <div class="accordion-body overflow-x-auto">
                 <table id="employee-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
@@ -211,11 +211,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-tab-target="tab-id-2">
+              <button class="accordion-button collapsed" type="button" data-tab-target="tab-id-2">
                 Студент
               </button>
             </h2>
-            <div class="accordion-collapse collapse show" data-tab-body="tab-id-2">
+            <div class="accordion-collapse collapse" data-tab-body="tab-id-2">
               <div class="accordion-body overflow-x-auto">
                 <table id="student-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
@@ -339,11 +339,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-tab-target="tab-id-3">
+              <button class="accordion-button collapsed" type="button" data-tab-target="tab-id-3">
                 Документы
               </button>
             </h2>
-            <div class="accordion-collapse collapse show" data-tab-body="tab-id-3">
+            <div class="accordion-collapse collapse" data-tab-body="tab-id-3">
               <div class="accordion-body overflow-x-auto">
                 <table id="documents-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
@@ -389,11 +389,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-tab-target="tab-id-3">
+              <button class="accordion-button collapsed" type="button" data-tab-target="tab-id-4">
                 Служба режима
               </button>
             </h2>
-            <div class="accordion-collapse collapse show" data-tab-body="tab-id-3">
+            <div class="accordion-collapse collapse" data-tab-body="tab-id-4">
               <div class="accordion-body overflow-x-auto">
                 <table id="mode-service-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
@@ -468,11 +468,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-tab-target="tab-id-4">
+              <button class="accordion-button collapsed" type="button" data-tab-target="tab-id-5">
                 Достижения
               </button>
             </h2>
-            <div class="accordion-collapse collapse show" data-tab-body="tab-id-4">
+            <div class="accordion-collapse collapse" data-tab-body="tab-id-5">
               <div class="accordion-body overflow-x-auto">
                 <table id="achievements-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
@@ -505,11 +505,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-tab-target="tab-id-5">
+              <button class="accordion-button collapsed" type="button" data-tab-target="tab-id-6">
                 Волонтерство
               </button>
             </h2>
-            <div class="accordion-collapse collapse show" data-tab-body="tab-id-5">
+            <div class="accordion-collapse collapse" data-tab-body="tab-id-6">
               <div class="accordion-body overflow-x-auto">
                 <table id="volunteering-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
                   <tr>
