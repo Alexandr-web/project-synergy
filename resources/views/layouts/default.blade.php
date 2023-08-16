@@ -14,6 +14,14 @@
     <x-navbar role="{{ getTokenData()['role'] }}" id="{{ getTokenData()['data_user']['id'] }}" />
     <main class="p-3">
         <div class="container">
+            @hasSection ('set-btn-back')
+            <div class="d-flex align-items-center">
+                <x-btn-back />
+                <h2 class="ms-2">@yield('content-title')</h2>
+            </div>
+            @else
+            <h2>@yield('content-title')</h2>
+            @endif
             @yield('content')
         </div>
     </main>

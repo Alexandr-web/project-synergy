@@ -2,6 +2,4 @@
 
 @section('title', 'Главная')
 
-@section('content')
-    <h1>Добро пожаловать!</h1>
-@endsection
+@section('content-title', 'Добро пожаловать!')
