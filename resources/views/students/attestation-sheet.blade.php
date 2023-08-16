@@ -2,9 +2,12 @@
 
 @section('title', 'Аттестационный лист')
 
+@section('set-btn-back', true)
+
+@section('content-title', 'Аттестационный лист студента')
+
 @section('content')
 <x-alert />
-<h4 class="text-center">Аттестационный лист студента программы "Кадровый резерв"</h4>
 <div class="overflow-x-auto">
     <table id="attestation-sheet-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
         <tr>

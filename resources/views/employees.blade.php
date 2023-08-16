@@ -2,9 +2,12 @@
 
 @section('title', 'Сотрудники')
 
+@section('set-btn-back', true)
+
+@section('content-title', 'Перечень ваших сотрудников')
+
 @section('content')
 <x-alert />
-<h4 class="text-center">Перечень ваших сотрудников</h4>
 <ul class="list-group ms-3 w-100 rounded-1">
     <li class="js-employee-btn list-group-item fs-5">Яковлев Александр Николаевич</li>
     <li class="js-employee-btn list-group-item fs-5">Иванов Иван Иванович</li>

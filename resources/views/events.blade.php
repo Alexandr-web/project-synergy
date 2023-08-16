@@ -2,11 +2,14 @@
 
 @section('title', 'План мероприятий')
 
+@section('set-btn-back', true)
+
+@section('content-title', 'План мероприятий')
+
 @section('content')
 <x-alert />
 <div class="d-flex align-items-center justify-content-between">
-    <h2>План мероприятий</h2>
-    <div class="d-flex align-items-center ms-3">
+    <div class="d-flex align-items-center">
         <button type="button" class="js-btn-download btn btn-outline-primary me-2">Скачать</button>
         <button type="button" class="js-btn-save btn btn-outline-primary me-2">Сохранить</button>
         <input class="js-upload-table-input form-control" type="file" accept=".xlsx">
