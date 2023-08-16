@@ -1,5 +1,5 @@
 import loadFiles from "./loadFiles";
-import tabs from "./tabs";
+import tabs from "../../../scripts/tabs";
 
 window.addEventListener("load", () => {
     loadFiles();
