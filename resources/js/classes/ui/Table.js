@@ -35,7 +35,7 @@ export default class Table {
     }
 
     _setEventForBtnDownload() {
-        if (!this.btnDownload) {
+        if ([this.btnDownload, this.table].some((el) => !el)) {
             return;
         }
 

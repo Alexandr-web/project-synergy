@@ -15,7 +15,7 @@
     <main class="p-3">
         <div class="container">
             @hasSection ('set-btn-back')
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center mb-2">
                 <x-btn-back />
                 <h2 class="ms-2">@yield('content-title')</h2>
             </div>
