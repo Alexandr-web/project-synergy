@@ -192,16 +192,16 @@
                       <table id="development-prospects-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th data-target-answer="0" data-question-head="" data-question="Направление:">Направление:</th>
-                            <th data-target-answer="1" data-question-head="" data-question="Подразделение:">Подразделение:</th>
-                            <th data-target-answer="2" data-question-head="" data-question="Приоритет сохранения:">Приоритет сохранения:</th>
+                            <th>Направление:</th>
+                            <th>Подразделение:</th>
+                            <th>Приоритет сохранения:</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td data-answer="Что-то" data-answer-id="0" contenteditable="">Что-то</td>
-                            <td data-answer="Что-нибудь" data-answer-id="1" contenteditable="">Что-нибудь</td>
-                            <td data-answer="Да" data-answer-id="2" contenteditable="">Да</td>
+                            <td contenteditable="">Что-то</td>
+                            <td contenteditable="">Что-нибудь</td>
+                            <td contenteditable="">Да</td>
                           </tr>
                         </tbody>
                       </table>
@@ -423,18 +423,18 @@
                       <table id="sport-achievements-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th data-question="Название мероприятия:" data-question-head="" data-target-answer="0">Название мероприятия:</th>
-                            <th data-question="Результат:" data-question-head="" data-target-answer="1">Результат:</th>
+                            <th>Название мероприятия:</th>
+                            <th>Результат:</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td data-answer="Что-то" data-answer-id="0" contenteditable="">Что-то</td>
-                            <td data-answer="Что-нибудь" data-answer-id="0" contenteditable="">Что-нибудь</td>
+                            <td contenteditable="">Что-то</td>
+                            <td contenteditable="">Что-нибудь</td>
                           </tr>
                           <tr>
-                            <td data-answer="Что-то" data-answer-id="1" contenteditable="">Что-то 2</td>
-                            <td data-answer="Что-нибудь" data-answer-id="1" contenteditable="">Что-нибудь 2</td>
+                            <td contenteditable="">Что-то 2</td>
+                            <td contenteditable="">Что-нибудь 2</td>
                           </tr>
                         </tbody>
                       </table>
@@ -447,18 +447,18 @@
                       <table id="art-skills-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th data-question="Навыки на момент поступления:" data-question-head="" data-target-answer="0">Навыки на момент поступления:</th>
-                            <th data-question="Развитие на программе:" data-question-head="" data-target-answer="1">Развитие на программе:</th>
+                            <th>Навыки на момент поступления:</th>
+                            <th>Развитие на программе:</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td data-answer="Что-нибудь" data-answer-id="0" contenteditable="">Что-нибудь</td>
-                            <td data-answer="Что-то" data-answer-id="0" contenteditable="">Что-то</td>
+                            <td contenteditable="">Что-нибудь</td>
+                            <td contenteditable="">Что-то</td>
                           </tr>
                           <tr>
-                            <td data-answer="Что-нибудь" data-answer-id="1" contenteditable="">Что-то 2</td>
-                            <td data-answer="Что-то" data-answer-id="1" contenteditable="">Что-нибудь 2</td>
+                            <td contenteditable="">Что-то 2</td>
+                            <td contenteditable="">Что-нибудь 2</td>
                           </tr>
                         </tbody>
                       </table>
@@ -484,18 +484,18 @@
                       <table id="corporation-achievements-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th data-question="Название" data-question-head="" data-target-answer="0">Название</th>
-                            <th data-question="Описание" data-question-head="" data-target-answer="1">Описание</th>
+                            <th>Название</th>
+                            <th>Описание</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td data-answer="Что-то" data-answer-id="0" contenteditable="">Что-то</td>
-                            <td data-answer="Что-нибудь" data-answer-id="0" contenteditable="">Что-нибудь</td>
+                            <td contenteditable="">Что-то</td>
+                            <td contenteditable="">Что-нибудь</td>
                           </tr>
                           <tr>
-                            <td data-answer="Что-то 2" data-answer-id="1" contenteditable="">Что-то 2</td>
-                            <td data-answer="Что-нибудь 2" data-answer-id="1" contenteditable="">Что-нибудь 2</td>
+                            <td contenteditable="">Что-то 2</td>
+                            <td contenteditable="">Что-нибудь 2</td>
                           </tr>
                         </tbody>
                       </table>
@@ -521,18 +521,18 @@
                       <table id="extracurricular-activities-table" class="table table-bordered m-0">
                         <thead>
                           <tr>
-                            <th data-question="Название" data-question-head="" data-target-answer="0">Название</th>
-                            <th data-question="Описание" data-question-head="" data-target-answer="1">Описание</th>
+                            <th>Название</th>
+                            <th>Описание</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td data-answer="Что-то" data-answer-id="0" contenteditable="">Что-то</td>
-                            <td data-answer="Что-нибудь" data-answer-id="0" contenteditable="">Что-нибудь</td>
+                            <td contenteditable="">Что-то</td>
+                            <td contenteditable="">Что-нибудь</td>
                           </tr>
                           <tr>
-                            <td data-answer="Что-то 2" data-answer-id="1" contenteditable="">Что-то 2</td>
-                            <td data-answer="Что-нибудь 2" data-answer-id="1" contenteditable="">Что-нибудь 2</td>
+                            <td contenteditable="">Что-то 2</td>
+                            <td contenteditable="">Что-нибудь 2</td>
                           </tr>
                         </tbody>
                       </table>

@@ -38,8 +38,8 @@ Route::prefix('students')->group(function () {
 });
 
 Route::view('/employees', 'employees')
-    ->middleware('redirect_if_token_not_exist')
-    ->middleware('role_must_be:boss');
+    ->middleware('redirect_if_token_not_exist');
+    // ->middleware('role_must_be:boss');
 
 Route::view('/events', 'events')
     ->middleware('redirect_if_token_not_exist')

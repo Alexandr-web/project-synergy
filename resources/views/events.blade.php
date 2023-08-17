@@ -16,7 +16,7 @@
     </div>
 </div>
 <div class="overflow-x-auto">
-    <table id="event-table" class="table table-bordered" border="1" cellspacing="0" cellpadding="0"></table>
+    <table id="event-table" class="table mt-2 table-bordered" border="1" cellspacing="0" cellpadding="0"></table>
     <x-nothing-text />
 </div>
 @endsection
