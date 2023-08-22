@@ -16,6 +16,11 @@ function uploadIsInvalid(input, alert) {
 
 export default () => {
     const inputs = document.querySelectorAll(".js-document-upload-input");
+
+    if (!inputs.length) {
+        return;
+    }
+
     const alert = new Alert().init();
 
     inputs.forEach((input) => {

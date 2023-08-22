@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @include('includes.styles')
     @include('includes.csrf')
+    @include('includes.favicon')
     <title>@yield('title')</title>
 </head>
 <body>
