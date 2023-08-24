@@ -67,5 +67,6 @@ class Kernel extends HttpKernel
         'role_must_be' => \App\Http\Middleware\RoleMustBe::class,
         'redirect_if_token_exist' => \App\Http\Middleware\RedirectIfTokenExist::class,
         'redirect_if_token_not_exist' => \App\Http\Middleware\RedirectIfTokenNotExist::class,
+        'check_auth' => \App\Http\Middleware\CheckAuthorization::class,
     ];
 }

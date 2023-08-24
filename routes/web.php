@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('auth')->group(function () {
     Route::view('/login', 'auth.login')
         ->middleware('redirect_if_token_exist');
+
+    Route::post('/login', [AuthController::class, 'login']);
 });
 
 Route::prefix('students')->group(function () {

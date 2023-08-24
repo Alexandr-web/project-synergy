@@ -1,1 +1,1 @@
-<link rel="icon" type="image/x-icon" href="{{ asset('icons/favicon.jpg') }}">
+<link rel="icon" type="image/x-icon" href="{{ asset('icons/synergyLogo.jpg') }}">
