@@ -21,13 +21,15 @@ export default () => {
     const callbackWhenAllCompleted = (fd) => {
         new Auth()
             .login(fd)
-            .then(({ token, message, }) => {
-                alert.show("success", message);
+            .then(({ token, message, type, }) => {
+                alert.show(type, message);
 
                 Cookie.set("token", token);
 
                 new Route().redirect();
             }).catch((err) => {
+                alert.show("error", `Произошла ошибка: "${err}"`);
+
                 throw err;
             });
     };

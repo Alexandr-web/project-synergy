@@ -36,7 +36,7 @@ class AuthController extends Controller
 
         $token = AuthToken::create($user_data);
 
-        return response(['message' => 'Вход успешно выполнен!', 'token' => $token], 200)
+        return response(['message' => 'Вход успешно выполнен!', 'token' => $token, 'type' => 'success'], 200)
             ->header('Content-Type', 'application/json');
     }
 }

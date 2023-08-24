@@ -552,7 +552,7 @@
     <div class="container-fluid">
       <form id="form-search" class="d-flex w-100" role="search">
         <input class="form-control me-2" type="text" name="search" placeholder="Поиск по ФИО" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Поиск</button>
+        <button class="btn btn-outline-primary" type="submit">Поиск</button>
       </form>
     </div>
 </nav>
