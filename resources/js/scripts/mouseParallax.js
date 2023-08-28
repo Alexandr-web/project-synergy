@@ -1,6 +1,10 @@
 export default (selectorTarget = ".js-parallax-target") => {
     const target = document.querySelector(selectorTarget);
 
+    if (!target) {
+        return;
+    }
+
     window.addEventListener("mousemove", (e) => {
         const coordX = ((e.clientX / window.innerWidth) * 30) - 15;
         const coordY = ((e.clientY / window.innerHeight) * 10) - 5;

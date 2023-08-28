@@ -1,9 +1,7 @@
 import ValidForm from "../../../classes/ui/ValidForm";
 
 export default () => {
-    const form = document.querySelector("#form-search");
-
-    if (!form) {
+    if (!document.querySelector("#form-search")) {
         return;
     }
 

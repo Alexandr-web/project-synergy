@@ -41,7 +41,7 @@ export default class Tabs {
     }
 
     _setEventBtns() {
-        this.data.map(({ btn, target, show, }) => {
+        this.data.forEach(({ btn, target, show, }) => {
             let showState = show;
 
             btn.addEventListener("click", () => {
