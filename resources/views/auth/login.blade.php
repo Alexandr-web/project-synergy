@@ -4,9 +4,9 @@
 
 @section('content')
 <x-alert />
-<div class="mx-auto w-50">
-  <h3 class="mb-2">Вход</h3>
-  <form id="form-login">
+<div class="mx-auto w-50 d-flex justify-content-center flex-column" style="height: 100vh">
+  <h2 class="mb-3 text-center">Вход</h2>
+  <form class="bg-light p-3 rounded" id="form-login">
       <div class="mb-3">
         <label for="login" class="form-label">Логин</label>
         <input type="text" class="form-control" id="login" name="login" placeholder="Логин">

@@ -204,7 +204,7 @@ export default class ValidForm {
 
     _setEventResetForm() {
         this.form.addEventListener("reset", () => {
-            this._getOptions().map(({ element, }) => {
+            this._getOptions().forEach(({ element, }) => {
                 element.classList.remove(this.validClassName);
                 element.classList.remove(this.invalidClassName);
 

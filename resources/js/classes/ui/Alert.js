@@ -12,7 +12,7 @@ export default class Alert {
     }
 
     _removeClassesByType() {
-        this.classesByType.map(({ name, }) => this.alert.classList.remove(name));
+        this.classesByType.forEach(({ name, }) => this.alert.classList.remove(name));
     }
 
     _getClassAlertByType(type) {
