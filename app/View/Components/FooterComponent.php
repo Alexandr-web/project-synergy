@@ -6,18 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Navbar extends Component
+class FooterComponent extends Component
 {
-    public string $role = '';
-    public int $id;
-
     /**
      * Create a new component instance.
      */
-    public function __construct(int $id, string $role)
+    public function __construct()
     {
-        $this->id = $id;
-        $this->role = $role;
+        //
     }
 
     /**
@@ -25,6 +21,6 @@ class Navbar extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.navbar');
+        return view('components.footer-component');
     }
 }

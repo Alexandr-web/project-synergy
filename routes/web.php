@@ -15,6 +15,8 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::prefix('auth')->group(function () {
+    Route::view('/', 'auth.main')
+        ->middleware('redirect_if_token_exist');
     Route::view('/login', 'auth.login')
         ->middleware('redirect_if_token_exist');
 

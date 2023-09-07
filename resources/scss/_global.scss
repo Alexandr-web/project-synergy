@@ -1,6 +1,6 @@
 @import "../../node_modules/normalize.css/normalize.css";
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+@import "./_fonts";
+@import "./_vars";
 
 *,
 *::after,
@@ -14,11 +14,119 @@
     text-decoration: none;
 }
 
+body {
+    font-family: "Proxima Nova Rg";
+    background-color: $white;
+    color: $black;
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-p {
+h1,
+h3,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
+}
+
+.container {
+    max-width: 1350px;
+    padding: 0 45px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.p {
+    &-t {
+        &-85 {
+            padding-top: 85px;
+        }
+
+        &-30 {
+            padding-top: 30px;
+        }
+    }
+
+    &-b {
+        &-30 {
+            padding-bottom: 30px;
+        }
+    }
+
+    &-l {
+        &-45 {
+            padding-left: 45px;
+        }
+    }
+
+    &-r {
+        &-45 {
+            padding-right: 45px;
+        }
+    }
+}
+
+.m {
+    &-b {
+        &-35 {
+            margin-bottom: 35px;
+        }
+
+        &-15 {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-directorate {
+    color: $grey;
+    font-weight: 600;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    &__field {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        border-radius: 8.165px;
+        border: 0.701px solid $black;
+        padding: 17px 16px;
+        color: $lightGrey2;
+        font-size: 17.525px;
+        font-weight: 600;
+    }
+
+    &__submit {
+        margin-top: 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8.165px;
+        padding: 19px;
+        border: none;
+        color: $white;
+        background-color: $red;
+        font-weight: 700;
+        font-size: 17px;
+    }
 }

@@ -10,8 +10,16 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <div class="container">
-        @yield('content')
+    <div class="layout" id="auth-layout">
+        <x-header-component :auth="true" />
+        <div class="auth">
+            <div class="container">
+                <div class="auth__inner">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
+        <x-footer-component />
     </div>
     @yield('scripts')
 </body>
