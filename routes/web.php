@@ -27,6 +27,11 @@ Route::prefix('directorate')->group(function () {
     Route::view('/', 'directorate');
 });
 
+Route::prefix('supervisor')->group(function () {
+    Route::view('/employees', 'supervisor.employees');
+    Route::view('/characteristic', 'supervisor.characteristic');
+});
+
 Route::prefix('students')->group(function () {
     Route::view('/{id}', 'students.index')
         ->where('id', '[0-9]+');
@@ -34,7 +39,3 @@ Route::prefix('students')->group(function () {
     Route::view('/{id}/attestation-sheet', 'students.attestation-sheet')
         ->where('id', '[0-9]+');
 });
-
-Route::view('/employees', 'employees');
-
-Route::view('/events', 'events');

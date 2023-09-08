@@ -1,6 +1,6 @@
 <div class="section manager-characteristic">
     <header class="section__header">
-        <h2 class="section__title">Характеристика руководителя</h2>
+        <h2 class="section__title section__title--middle">Характеристика руководителя</h2>
     </header>
     <div class="section__main">
         <form class="form questionnaire-form">
@@ -52,6 +52,9 @@
                 <label class="form__label" for="perspectives">Карьерные и экспертные перспективы</label>
                 <textarea class="form__textarea form__input" name="perspectives" id="perspectives" placeholder="Карьерные и экспертные перспективы"></textarea>
             </div>
+            @if ($submit)
+            <button class="form__submit" type="submit">Отправить</button>
+            @endif
         </form>
     </div>
 </div>

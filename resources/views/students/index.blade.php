@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.empty')
 
 @section('title', 'Студенты')
 
@@ -6,8 +6,4 @@
     <x-student-list-info-component />
     <x-manager-characteristic-component />
     <x-feedback-component />
-@endsection
-
-@section('scripts')
-  @vite(['resources/js/pages/employee/students/index.js'])
 @endsection

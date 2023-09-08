@@ -48,8 +48,10 @@
                     <li class="student-info__list-item">
                         <span class="student-info__list-item-name">Контактные данные родителей:</span>
                         <ul class="student-info__sublist">
-                            <li class="student-info__sublist-item">Иванова Александра Ивановна +7 (900) 888 88 88</li>
-                            <li class="student-info__sublist-item">Иванов Иван Иванович +7 (900) 999 99 99 (внутр.)</li>
+                            <li class="student-info__sublist-item">Иванова Александра Ивановна</li>
+                            <li class="student-info__sublist-item">+7 (900) 888 88 88</li>
+                            <li class="student-info__sublist-item">Иванов Иван Иванович</li>
+                            <li class="student-info__sublist-item">+7 (900) 999 99 99 (внутр.)</li>
                         </ul>
                     </li>
                     <li class="student-info__list-item">

@@ -161,9 +161,13 @@
 }
 
 .questionnaire-form {
+    .custom-radio__target {
+        font-size: 30px;
+    }
+
     .form {
-        .custom-radio__target {
-            font-size: 30px;
+        &__field:not(:last-child) {
+            margin-bottom: 60px;
         }
 
         &__label {
@@ -407,27 +411,6 @@
     }
 }
 
-.feedback-form {
-    .table {
-        &__head {
-            &-th {
-                background-color: $lightGrey8;
-                border: 1px solid $lightGrey2;
-            }
-        }
-    }
-
-    .form {
-        &__textarea {
-            border: none;
-            background: $white;
-            border-radius: none;
-            color: $black;
-            font-weight: 400;
-        }
-    }
-}
-
 .students-list {
     display: flex;
     flex-direction: column;
@@ -465,6 +448,20 @@
     width: 100%;
     border: 1px solid $lightGrey7;
     border-collapse: collapse;
+
+    &--grey {
+        .table {
+            &__head {
+                &-th {
+                    background-color: $lightGrey8;
+                    border: 1px solid $lightGrey2;
+                    padding: 37px 72px;
+                    font-size: 29.73px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
 
     &__head {
 
@@ -524,6 +521,10 @@
     &__title {
         font-size: 57px;
         font-weight: 600;
+
+        &--middle {
+            font-size: 39px;
+        }
     }
 
     &__main {
@@ -615,5 +616,21 @@
         color: $white;
         font-size: 20px;
         font-weight: 700;
+    }
+}
+
+.check-block {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        margin-right: 30px;
+        font-size: 29px;
+        font-weight: 600;
+    }
+
+    .custom-checkbox[data-custom-checkbox-type=checkmark] .custom-checkbox__target {
+        width: 30px;
+        height: 30px;
     }
 }

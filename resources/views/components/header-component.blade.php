@@ -1,5 +1,5 @@
 <header class="header {{ $auth ? '' : 'header--red' }}">
-    <div class="header__inner p-l-45 p-r-45 p-t-30 p-b-30">
+    <div class="header__inner p-l-45 p-r-45 p-t-22 p-b-22">
         <div class="header__logo">
             @if ($auth)
                 <img src="{{ asset('images/logo_synergy.png') }}" alt="Синергия Кадровый резерв">

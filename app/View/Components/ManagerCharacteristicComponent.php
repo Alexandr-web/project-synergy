@@ -8,12 +8,14 @@ use Illuminate\View\Component;
 
 class ManagerCharacteristicComponent extends Component
 {
+    public bool $submit = false;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(bool $submit = false)
     {
-        //
+        $this->submit = $submit;
     }
 
     /**

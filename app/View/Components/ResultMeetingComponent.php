@@ -6,14 +6,16 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class FeedbackComponent extends Component
+class ResultMeetingComponent extends Component
 {
+    public bool $submit = false;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(bool $submit = false)
     {
-        //
+        $this->submit = $submit;
     }
 
     /**
@@ -21,6 +23,6 @@ class FeedbackComponent extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.students.feedback-component');
+        return view('components.result-meeting-component');
     }
 }
