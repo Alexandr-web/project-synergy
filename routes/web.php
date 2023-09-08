@@ -30,6 +30,9 @@ Route::prefix('directorate')->group(function () {
 Route::prefix('students')->group(function () {
     Route::view('/{id}', 'students.index')
         ->where('id', '[0-9]+');
+
+    Route::view('/{id}/attestation-sheet', 'students.attestation-sheet')
+        ->where('id', '[0-9]+');
 });
 
 Route::view('/employees', 'employees');
