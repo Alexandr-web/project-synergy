@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,5 +38,10 @@ Route::prefix('students')->group(function () {
         ->where('id', '[0-9]+');
 
     Route::view('/{id}/attestation-sheet', 'students.attestation-sheet')
+        ->where('id', '[0-9]+');
+});
+
+Route::prefix('employees')->group(function () {
+    Route::get('/{id}', [EmployeeController::class, 'renderPage'])
         ->where('id', '[0-9]+');
 });

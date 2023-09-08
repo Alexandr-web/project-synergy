@@ -6,14 +6,18 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class FeedbackComponent extends Component
+class NavbarComponent extends Component
 {
+    public $list = [];
+    public $activeRoute = '';
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($list, $activeRoute)
     {
-        //
+        $this->list = $list;
+        $this->activeRoute = $activeRoute;
     }
 
     /**
@@ -21,6 +25,6 @@ class FeedbackComponent extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.feedback-component');
+        return view('components.navbar-component');
     }
 }
