@@ -162,6 +162,10 @@
 
 .questionnaire-form {
     .form {
+        .custom-radio__target {
+            font-size: 30px;
+        }
+
         &__label {
             font-size: 31px;
             font-weight: 600;
@@ -247,12 +251,16 @@
     cursor: pointer;
 
     &[data-custom-checkbox-type=checkmark] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         .custom-checkbox__target {
             width: 17px;
             height: 17px;
-            border: 1px solid $red;
+            background-repeat: no-repeat;
+            background-size: cover;
             display: inline-block;
-            border-radius: 3px;
         }
 
         .form__checkbox:checked+.custom-checkbox__target>.custom-checkbox__icon {
@@ -276,7 +284,6 @@
             border-radius: 10px;
             background-color: $lightGrey8;
             padding: 8px 19px;
-            font-size: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -348,6 +355,10 @@
         display: flex;
         flex-direction: column;
 
+        &-title {
+            margin-right: 15px;
+        }
+
         &:not(:last-child) {
             margin-bottom: 15px;
         }
@@ -355,7 +366,6 @@
         &--row {
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
         }
 
         &-content {
@@ -444,6 +454,11 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 23px;
+
+    &--column {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .table {
