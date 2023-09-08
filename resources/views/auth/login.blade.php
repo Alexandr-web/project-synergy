@@ -1,7 +1,3 @@
-<?php
-  $role = $_GET['role'];
-?>
-
 @extends('layouts.auth')
 
 @section('title', 'Вход')

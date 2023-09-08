@@ -1,5 +1,3 @@
-@include('includes.getTokenData')
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,25 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @include('includes.styles')
     @include('includes.csrf')
-    @include('includes.favicon')
     <title>@yield('title')</title>
 </head>
 <body>
-    <x-navbar role="{{ getTokenData()['role'] }}" id="{{ getTokenData()['data_user']['id'] }}" />
-    <main class="p-3">
-        <div class="container">
-            @hasSection ('set-btn-back')
-            <div class="d-flex align-items-center mb-2">
-                <x-btn-back />
-                <h2 class="ms-2">@yield('content-title')</h2>
+    <div class="layout" id="default-layout">
+        <x-header-component :auth="false" />
+        <main class="main p-t-85">
+            <div class="container">
+                @yield('content')
             </div>
-            @else
-            <h2>@yield('content-title')</h2>
-            @endif
-            @yield('content')
-        </div>
-    </main>
+        </main>
+        <x-footer-component />
+    </div>
     @yield('scripts')
-    @vite(['resources/js/scripts/deleteJWTFromCookie.js'])
 </body>
 </html>

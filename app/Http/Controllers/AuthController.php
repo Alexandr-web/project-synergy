@@ -39,4 +39,14 @@ class AuthController extends Controller
         return response(['message' => 'Вход успешно выполнен!', 'token' => $token, 'type' => 'success'], 200)
             ->header('Content-Type', 'application/json');
     }
+
+    public function renderLoginPage(Request $req) {
+        $roles = ['student', 'directorate', 'supervisor'];
+
+        if (!array_key_exists("role", $_GET) || !in_array($_GET['role'], $roles)) {
+            return abort(404);
+        }
+
+        return view("auth.login", ['role' => $_GET['role']]);
+    }
 }
