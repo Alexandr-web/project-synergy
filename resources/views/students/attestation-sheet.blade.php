@@ -24,21 +24,21 @@
             <div class="form__field">
                 <label class="form__label">4. Ваш курс</label>
                 <div class="radios">
-                    <label class="custom-radio">
-                        <input class="form__radio" type="radio" name="course" value="1">
-                        <span class="custom-radio__target" data-custom-radio-type="box">1</span>
+                    <label class="custom-radio" for="course-1" data-custom-radio-type="box">
+                        <input class="form__radio" type="radio" name="course" id="course-1" value="1" checked>
+                        <span class="custom-radio__target">1</span>
                     </label>
-                    <label class="custom-radio">
-                        <input class="form__radio" type="radio" name="course" value="2">
-                        <span class="custom-radio__target" data-custom-radio-type="box">2</span>
+                    <label class="custom-radio" for="course-2" data-custom-radio-type="box">
+                        <input class="form__radio" type="radio" name="course" id="course-2" value="2">
+                        <span class="custom-radio__target">2</span>
                     </label>
-                    <label class="custom-radio">
-                        <input class="form__radio" type="radio" name="course" value="3">
-                        <span class="custom-radio__target" data-custom-radio-type="box">3</span>
+                    <label class="custom-radio" for="course-3" data-custom-radio-type="box">
+                        <input class="form__radio" type="radio" name="course" id="course-3" value="3">
+                        <span class="custom-radio__target">3</span>
                     </label>
-                    <label class="custom-radio">
-                        <input class="form__radio" type="radio" name="course" value="4">
-                        <span class="custom-radio__target" data-custom-radio-type="box">4</span>
+                    <label class="custom-radio" for="course-4" data-custom-radio-type="box">
+                        <input class="form__radio" type="radio" name="course" id="course-4" value="4">
+                        <span class="custom-radio__target">4</span>
                     </label>
                 </div>
             </div>
@@ -71,6 +71,10 @@
                 <textarea class="form__textarea form__input" name="who-is-leader" id="who-is-leader" placeholder="Введите текст"></textarea>
             </div>
             <div class="form__field">
+                <label class="form__label" for="random-fellow-traveler">12. Кто из ваших сокурсников оказался «случайным попутчиком» для программы Кадровый резерв и Корпорации?</label>
+                <textarea class="form__textarea form__input" name="random-fellow-traveler" id="random-fellow-traveler" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
                 <label class="form__label" for="skillful-employees">13. Укажите сотрудников Корпорации, от которых вы получаете ценные знания и рекомендации?</label>
                 <textarea class="form__textarea form__input" name="skillful-employees" id="skillful-employees" placeholder="Введите текст"></textarea>
             </div>
@@ -81,6 +85,14 @@
             <div class="form__field">
                 <label class="form__label" for="future-perspectives">15. Какие карьерные перспективы вы перед собой видите?</label>
                 <textarea class="form__textarea form__input" name="future-perspectives" id="future-perspectives" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="improvements-in-my-department">16. Какие улучшения необходимо сделать в вашем отделе, департаменте и Корпорации в целом для повышения эффективности деятельности?</label>
+                <textarea class="form__textarea form__input" name="improvements-in-my-department" id="improvements-in-my-department" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="new-services">17. Какие новые продукты и услуги Клиентам вы предлагаете создать в Корпорации?</label>
+                <textarea class="form__textarea form__input" name="new-services" id="new-services" placeholder="Введите текст"></textarea>
             </div>
             <div class="form__field">
                 <label class="form__label" for="new-business-directions">18. Какие новые направления бизнеса вы предлагаете открыть в Корпорации?</label>

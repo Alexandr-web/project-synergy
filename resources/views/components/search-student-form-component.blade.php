@@ -27,12 +27,10 @@
                 <div class="form__field form__field--row">
                     <div class="form__field-title">Иностранец</div>
                     <div class="form__field-content form__field-content--row">
-                        <label class="checkbox" for="is-foreigner">
+                        <label class="custom-checkbox" data-custom-checkbox-type="checkmark" for="is-foreigner">
                             <input class="form__checkbox" type="checkbox" id="is-foreigner" name="is-foreigner">
-                            <span class="checkbox-custom">
-                                <div class="checkbox-custom--on">
-                                    <img class="checkbox-custom__icon" src="{{ asset('icons/check-on.svg') }}" alt="Галочка">
-                                </div>
+                            <span class="custom-checkbox__target">
+                                <img class="custom-checkbox__icon" src="{{ asset('icons/check-on.svg') }}" alt="Галочка">
                             </span>
                         </label>
                     </div>
@@ -40,13 +38,13 @@
                 <div class="form__field form__field--row">
                     <div class="form__field-title">Статус:</div>
                     <div class="form__field-content form__field-content--row">
-                        <label class="radio" for="status-working">
+                        <label class="custom-radio" data-custom-radio-type="line" for="status-working">
                             <input class="form__radio" type="radio" id="status-working" value="working" name="status">
-                            <h4 class="radio__title">Работает</h4>
+                            <span class="custom-radio__target">Работает</span>
                         </label>
-                        <label class="radio" for="status-fired">
+                        <label class="custom-radio" data-custom-radio-type="line" for="status-fired">
                             <input class="form__radio" type="radio" id="status-fired" value="fired" name="status">
-                            <h4 class="radio__title">Уволен</h4>
+                            <span class="custom-radio__target">Уволен</span>
                         </label>
                     </div>
                 </div>
