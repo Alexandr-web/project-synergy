@@ -248,6 +248,8 @@
         top: 55px;
         z-index: 999;
         width: 100%;
+        max-height: 350px;
+        overflow: auto;
     }
 }
 
@@ -663,5 +665,26 @@
     .custom-checkbox[data-custom-checkbox-type=checkmark] .custom-checkbox__target {
         width: 30px;
         height: 30px;
+    }
+}
+
+[data-tab-target] {
+    & [data-tab-icon] {
+        transform: rotateX(-180deg);
+        transition: transform .3s;
+    }
+
+    &.collapsed {
+        & [data-tab-icon] {
+            transform: rotateX(0deg);
+        }
+    }
+}
+
+[data-tab-body] {
+    display: none;
+
+    &.show {
+        display: block;
     }
 }

@@ -8,3 +8,7 @@
     <x-student-movement-component />
     <x-students-list-component />
 @endsection
+
+@section('scripts')
+    @vite(['resources/js/pages/directorate.js'])
+@endsection

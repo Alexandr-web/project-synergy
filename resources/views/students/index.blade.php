@@ -7,3 +7,7 @@
     <x-manager-characteristic-component />
     <x-feedback-component />
 @endsection
+
+@section('scripts')
+    @vite(['resources/js/pages/students.js'])
+@endsection

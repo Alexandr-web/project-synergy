@@ -34,3 +34,7 @@
     </div>
 </div>
 @endsection
+
+@section('scripts')
+    @vite(['resources/js/pages/supervisor/employees.js'])
+@endsection

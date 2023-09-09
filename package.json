@@ -14,6 +14,7 @@
         "jwt-decode": "^3.1.2",
         "laravel-vite-plugin": "^0.7.5",
         "normalize.css": "^8.0.1",
+        "resize-observer-polyfill": "^1.5.1",
         "vite": "^4.4.8"
     },
     "dependencies": {

@@ -131,3 +131,8 @@ h6 {
     display: flex;
     flex-direction: column;
 }
+
+.simplebar-scrollbar::before {
+    background-color: $lightGrey10;
+    width: 4px;
+}

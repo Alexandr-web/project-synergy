@@ -5,12 +5,12 @@
     </form>
     <div class="filters">
         <div class="filters__head">
-            <button class="filters__head-btn">
+            <button class="filters__head-btn collapsed" data-tab-target="filter">
                 <span class="filters__head-btn-text">Фильтровать</span>
-                <img class="filters__head-btn-icon" src="{{ asset('icons/arrow-down.svg') }}" alt="Стрелка вниз">
+                <img class="filters__head-btn-icon" src="{{ asset('icons/arrow-down.svg') }}" alt="Стрелка вниз" data-tab-icon>
             </button>
         </div>
-        <div class="filters__body">
+        <div class="filters__body" data-tab-body="filter" data-simplebar data-simplebar-auto-hide="false">
             <form class="form filters__form">
                 <div class="form__field form__field--row">
                     <div class="form__field-title">Год поступления</div>
