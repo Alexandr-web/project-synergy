@@ -3,7 +3,7 @@
         ['path' => '?tab=info', 'text' => 'Основное'],
         ['path' => '?tab=attestation', 'text' => 'Аттестация'],
         ['path' => '?tab=documents', 'text' => 'Документы'],
-        ['path' => '?tab=mode-service', 'text' => 'Служба режима',],
+        ['path' => '?tab=mode-services', 'text' => 'Служба режима',],
         ['path' => '?tab=education', 'text' => 'Обучение'],
     ];
 ?>

@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section m-t-60">
     <header class="section__header">
         <h2 class="section__title">Документы</h2>
         <button class="btn--view-all">Смотреть все</button>

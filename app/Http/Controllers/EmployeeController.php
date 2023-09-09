@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class EmployeeController extends Controller
 {
     public function renderPage(Request $req, int $id) {
-        $tabs = ['info', 'attestation', 'documents', 'mode-service', 'education'];
+        $tabs = ['info', 'attestation', 'documents', 'mode-services', 'education'];
 
         if (!array_key_exists('tab', $_GET)) {
             $url = url()->current();
