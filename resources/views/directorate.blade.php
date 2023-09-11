@@ -3,7 +3,7 @@
 @section('title', 'Дирекция')
 
 @section('content')
-    <x-public-info-component />
+    <x-public-info-component idList="public-info-list-documents" />
     <x-action-plan-component />
     <x-student-movement-component />
     <x-students-list-component />

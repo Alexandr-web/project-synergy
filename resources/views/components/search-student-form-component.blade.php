@@ -1,17 +1,17 @@
 <div class="search">
     <form class="search__form" id="search-student-form">
-        <input class="form__input search__input" type="text" name="search" placeholder="Поиск студента...">
-        <button class="form__submit" type="submit">Поиск</button>
-    </form>
-    <div class="filters">
-        <div class="filters__head">
-            <button class="filters__head-btn collapsed" data-tab-target="filter">
-                <span class="filters__head-btn-text">Фильтровать</span>
-                <img class="filters__head-btn-icon" src="{{ asset('icons/arrow-down.svg') }}" alt="Стрелка вниз" data-tab-icon>
-            </button>
+        <div class="search__block">
+            <input class="form__input search__input" type="text" name="search" placeholder="Поиск студента...">
+            <button class="form__submit" type="submit">Поиск</button>
         </div>
-        <div class="filters__body" data-tab-body="filter" data-simplebar data-simplebar-auto-hide="false">
-            <form class="form filters__form">
+        <div class="filters">
+            <div class="filters__head">
+                <button class="filters__head-btn collapsed" data-tab-target="filter" type="button">
+                    <span class="filters__head-btn-text">Фильтровать</span>
+                    <img class="filters__head-btn-icon" src="{{ asset('icons/arrow-down.svg') }}" alt="Стрелка вниз" data-tab-icon>
+                </button>
+            </div>
+            <div class="filters__body" data-tab-body="filter" data-simplebar data-simplebar-auto-hide="false">
                 <div class="form__field form__field--row">
                     <div class="form__field-title">Год поступления</div>
                     <div class="form__field-content">
@@ -96,7 +96,7 @@
                         </label>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
+    </form>
 </div>

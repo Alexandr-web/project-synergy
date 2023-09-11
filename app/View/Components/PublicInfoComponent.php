@@ -8,12 +8,14 @@ use Illuminate\View\Component;
 
 class PublicInfoComponent extends Component
 {
+    public string $idList = 'documents-list';
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(string $idList = 'documents-list')
     {
-        //
+        $this->idList = $idList;
     }
 
     /**
