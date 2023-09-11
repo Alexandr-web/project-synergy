@@ -2,8 +2,8 @@ export default class ValidForm {
     constructor(selectorForm, options, callbackWhenAllCompleted, callbackWhenFailed) {
         this.selectorForm = selectorForm;
         this.options = options;
-        this.validClassName = "is-valid";
-        this.invalidClassName = "is-invalid";
+        this.validClassName = "valid";
+        this.invalidClassName = "invalid";
         this.form = document.querySelector(selectorForm);
         this.allComplete = false;
         this.callbackWhenAllCompleted = callbackWhenAllCompleted;

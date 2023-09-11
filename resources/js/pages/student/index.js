@@ -1,5 +1,5 @@
-import setRedirectBack from "../../scripts/setRedirectBack";
+import sendAttestationSheet from "./sendAttestationSheet";
 
 window.addEventListener("load", () => {
-    setRedirectBack();
+    sendAttestationSheet();
 });

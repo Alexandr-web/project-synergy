@@ -1,5 +1,5 @@
 export default class Tabs {
-    constructor(selectorOpenBtn = ".accordion-button", selectorBody = ".accordion-collapse") {
+    constructor(selectorOpenBtn = "[data-tab-target]", selectorBody = "[data-tab-body]") {
         this.openBtns = document.querySelectorAll(selectorOpenBtn);
         this.body = document.querySelectorAll(selectorBody);
         this.data = [];

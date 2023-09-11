@@ -1,110 +1,127 @@
 @extends('layouts.default')
 
-@section('title', 'Аттестационный лист')
-
-@section('set-btn-back', true)
-
-@section('content-title', 'Аттестационный лист студента')
+@section('title', 'Аттестационный лист студента')
 
 @section('content')
-<x-alert />
-<div class="overflow-x-auto">
-    <table id="attestation-sheet-table" class="table table-bordered m-0" border="1" cellspacing="0" cellpadding="0">
-        <tr>
-            <td class="w-50">Дата заполнения (чч.мм.гг.):</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Ваше Имя Фамилия Отчество:</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Структурное подразделение(Департамент):</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Ваш Курс:</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Перечислите ваши измеримые достижения за отчетный период:</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Какие планы вам не удалось осуществить и почему?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Какие компетенции, навыки и умения вы развивали за отчетный период?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Какие компетенции, навыки и умения вы собираетесь развивать в будущемпериоде?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Кто ваш наставник?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Чему вы научились под руководствомвашего наставника?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Кого из ваших сокурсников вы считаете лидером, которого можно ставить в пример и равняться на него?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Кто из ваших сокурсников оказался «случайным попутчиком» для программы Кадровый резерв и Корпорации?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Укажите сотрудников Корпорации, от которых вы получаете ценные знания и рекомендации?:</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Кого из сотрудников Корпорации вы считаете Лидером, которого можно ставить в пример и равняться на него?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Какие карьерные перспективы вы перед собой видите?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Какие улучшения необходимо сделать в вашем отделе, департаменте и Корпорации в целом для повышения эффективности деятельности?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Какие новые продукты и услуги Клиентам вы предлагаете создать в Корпорации?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Какие новые направления бизнеса вы предлагаете открыть в Корпорации?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Какие улучшения в системе подготовки программы "Кадровый резерв"  необходимо осуществить?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Какие направления набора абитуриентов на программу "Кадровый резерв" вы считаете наиболее эффективными?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Выберите направления, в которых вы видите свое дальнейшее развитие вКорпорации?</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">В каком департаменте вы сможете принести Корпорации ощутимую пользу и результат</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-        <tr>
-            <td class="w-50">Сформулируйте в свободной форме ваши предложения высшему руководству по обеспечению устойчивого развития корпорации</td>
-            <td class="w-50" contenteditable=""></td>
-        </tr>
-    </table>
+<div class="section feedback-section">
+    <header class="section__header">
+        <h2 class="section__title">Аттестационный лист студента программы «Кадровый Резерв»</h2>
+    </header>
+    <div class="section__main">
+        <form class="form questionnaire-form" id="attestation-sheet-form">
+            <div class="form__field">
+                <label class="form__label" for="date-fill">1. Дата заполнения</label>
+                <input class="form__input" type="date" id="date-fill" name="date-fill">
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="name">2. Ваше ФИО</label>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Фамилия Имя Отчество">
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="department">3. Структурное подразделение (департамент)</label>
+                <input class="form__input" type="text" id="department" name="department" placeholder="Название департамента">
+            </div>
+            <div class="form__field">
+                <label class="form__label">4. Ваш курс</label>
+                <div class="radios">
+                    <label class="custom-radio" for="course-1" data-custom-radio-type="box">
+                        <input class="form__radio" type="radio" name="course" id="course-1" value="1" checked>
+                        <span class="custom-radio__target">1</span>
+                    </label>
+                    <label class="custom-radio" for="course-2" data-custom-radio-type="box">
+                        <input class="form__radio" type="radio" name="course" id="course-2" value="2">
+                        <span class="custom-radio__target">2</span>
+                    </label>
+                    <label class="custom-radio" for="course-3" data-custom-radio-type="box">
+                        <input class="form__radio" type="radio" name="course" id="course-3" value="3">
+                        <span class="custom-radio__target">3</span>
+                    </label>
+                    <label class="custom-radio" for="course-4" data-custom-radio-type="box">
+                        <input class="form__radio" type="radio" name="course" id="course-4" value="4">
+                        <span class="custom-radio__target">4</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="achievements">5. Перечислите ваши достижения за отчетный период</label>
+                <textarea class="form__textarea form__input" name="achievements" id="achievements" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="unfulfilled-plans">6. Какие планы вам не удалось осуществить и почему?</label>
+                <textarea class="form__textarea form__input" name="unfulfilled-plans" id="unfulfilled-plans" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="developed-skills">7. Какие компетенции, навыки и умения вы развивали за отчетный период?</label>
+                <textarea class="form__textarea form__input" name="developed-skills" id="developed-skills" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="skills-for-development">8. Какие компетенции, навыки и умения вы собираетесь развивать в будущем периоде?</label>
+                <textarea class="form__textarea form__input" name="skills-for-development" id="skills-for-development" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="mentor">9. Кто ваш наставник?</label>
+                <textarea class="form__textarea form__input" name="mentor" id="mentor" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="acquired-skills-from-mentor">10. Чему вы научились под руководством вашего наставника?</label>
+                <textarea class="form__textarea form__input" name="acquired-skills-from-mentor" id="acquired-skills-from-mentor" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="who-is-leader">11. Кого из ваших сокурсников вы считаете лидером, которого можно ставить в пример и равняться на него?</label>
+                <textarea class="form__textarea form__input" name="who-is-leader" id="who-is-leader" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="random-fellow-traveler">12. Кто из ваших сокурсников оказался «случайным попутчиком» для программы Кадровый резерв и Корпорации?</label>
+                <textarea class="form__textarea form__input" name="random-fellow-traveler" id="random-fellow-traveler" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="skillful-employees">13. Укажите сотрудников Корпорации, от которых вы получаете ценные знания и рекомендации?</label>
+                <textarea class="form__textarea form__input" name="skillful-employees" id="skillful-employees" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="leader-employee">14. Кого из сотрудников Корпорации вы считаете Лидером, которого можно ставить в пример и равняться на него?</label>
+                <textarea class="form__textarea form__input" name="leader-employee" id="leader-employee" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="future-perspectives">15. Какие карьерные перспективы вы перед собой видите?</label>
+                <textarea class="form__textarea form__input" name="future-perspectives" id="future-perspectives" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="improvements-in-my-department">16. Какие улучшения необходимо сделать в вашем отделе, департаменте и Корпорации в целом для повышения эффективности деятельности?</label>
+                <textarea class="form__textarea form__input" name="improvements-in-my-department" id="improvements-in-my-department" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="new-services">17. Какие новые продукты и услуги Клиентам вы предлагаете создать в Корпорации?</label>
+                <textarea class="form__textarea form__input" name="new-services" id="new-services" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="new-business-directions">18. Какие новые направления бизнеса вы предлагаете открыть в Корпорации?</label>
+                <textarea class="form__textarea form__input" name="new-business-directions" id="new-business-directions" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="improvements">19. Какие улучшения в системе подготовки программы «Кадровый Резерв» необходимо осуществить?</label>
+                <textarea class="form__textarea form__input" name="improvements" id="improvements" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="best-directions">20. Какие направления набора абитуриентов на программу «Кадровый Резерв» вы считаете наиболее эффективными?</label>
+                <textarea class="form__textarea form__input" name="best-directions" id="best-directions" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="my-directions">21. Выберите направления, в которых вы видите свое дальнейшее развитие в Корпорации?</label>
+                <textarea class="form__textarea form__input" name="my-directions" id="my-directions" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="my-profitable-directions">22. В каком департаменте вы сможете принести Корпорации ощутимую пользу и результат</label>
+                <textarea class="form__textarea form__input" name="my-profitable-directions" id="my-profitable-directions" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="my-suggestions">23. Сформулируйте в свободной форме ваши предложения высшему руководству по обеспечению устойчивого развития корпорации.</label>
+                <textarea class="form__textarea form__input" name="my-suggestions" id="my-suggestions" placeholder="Введите текст"></textarea>
+            </div>
+            <button class="form__submit" type="submit">Отправить</button>
+        </form>
+    </div>
 </div>
-<button class="js-save-table btn btn-outline-primary d-block mx-auto mt-3">Сохранить</button>
 @endsection
 
 @section('scripts')
