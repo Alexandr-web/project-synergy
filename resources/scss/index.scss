@@ -354,14 +354,6 @@
         font-family: "Proxima Nova Rg";
         padding: 10px 12px;
 
-        &--invalid {
-            border-color: $red;
-        }
-
-        &--valid {
-            border-color: $black;
-        }
-
         &--white {
             background-color: $white;
         }
@@ -415,14 +407,6 @@
         color: $lightGrey2;
         font-size: 17.525px;
         font-weight: 600;
-
-        &--invalid {
-            border-color: $red;
-        }
-
-        &--valid {
-            border-color: $black;
-        }
     }
 
     &__submit {

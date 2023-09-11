@@ -21,5 +21,5 @@
 @endsection
 
 @section('scripts')
-    @vite(['resources/js/pages/auth/index.js'])
+    @vite(['resources/js/pages/auth.js'])
 @endsection

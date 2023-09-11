@@ -8,7 +8,7 @@
         <h2 class="section__title">Аттестационный лист студента программы «Кадровый Резерв»</h2>
     </header>
     <div class="section__main">
-        <form class="form questionnaire-form">
+        <form class="form questionnaire-form" id="attestation-sheet-form">
             <div class="form__field">
                 <label class="form__label" for="date-fill">1. Дата заполнения</label>
                 <input class="form__input" type="date" id="date-fill" name="date-fill">
@@ -122,4 +122,8 @@
         </form>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    @vite(['resources/js/pages/student/index.js'])
 @endsection

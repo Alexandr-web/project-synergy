@@ -3,7 +3,7 @@
         <h2 class="section__title section__title--middle">Характеристика руководителя</h2>
     </header>
     <div class="section__main">
-        <form class="form questionnaire-form">
+        <form class="form questionnaire-form" id="manager-characteristic">
             <div class="form__field">
                 <label class="form__label" for="date-fill">Дата заполнения</label>
                 <input class="form__input" type="date" id="date-fill" name="date-fill" {{ $readonly ? 'readonly' : '' }}>

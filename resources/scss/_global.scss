@@ -136,3 +136,16 @@ h6 {
     background-color: $lightGrey10;
     width: 4px;
 }
+
+input,
+textarea,
+select {
+    &.invalid {
+        border-color: $red !important;
+        background-color: rgba($red, .1) !important;
+    }
+
+    &.valid {
+        border-color: $black !important;
+    }
+}

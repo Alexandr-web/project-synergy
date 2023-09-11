@@ -21,7 +21,7 @@
         <div class="check-block m-t-50">
             <div class="check-block__text">Встреча проведена</div>
             <label class="custom-checkbox" data-custom-checkbox-type="checkmark" for="is-foreigner">
-                <input class="form__checkbox" type="checkbox" id="is-foreigner" name="is-foreigner">
+                <input class="form__checkbox" type="checkbox" id="is-foreigner" name="is-foreigner" {{ $disabled ? "disabled" : "" }}>
                 <span class="custom-checkbox__target" style="background-image: url({{ asset('icons/check-off.svg') }})">
                     <img class="custom-checkbox__icon" src="{{ asset('icons/check-on.svg') }}" alt="Галочка">
                 </span>

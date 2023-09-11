@@ -9,13 +9,15 @@ use Illuminate\View\Component;
 class ResultLastMeetingComponent extends Component
 {
     public bool $checkbox = false;
+    public bool $disabled = false;
 
     /**
      * Create a new component instance.
      */
-    public function __construct(bool $checkbox = false)
+    public function __construct(bool $checkbox = false, bool $disabled = false)
     {
         $this->checkbox = $checkbox;
+        $this->disabled = $disabled;
     }
 
     /**

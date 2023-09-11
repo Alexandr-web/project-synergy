@@ -10,5 +10,5 @@
 @endsection
 
 @section('scripts')
-    @vite(['resources/js/pages/directorate.js'])
+    @vite(['resources/js/pages/directorate/index.js'])
 @endsection

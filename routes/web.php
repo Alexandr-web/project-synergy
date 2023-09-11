@@ -21,7 +21,6 @@ Route::prefix('auth')->group(function () {
 
     Route::get('/login', [AuthController::class, 'renderLoginPage'])
         ->middleware('redirect_if_token_exist');
-    Route::post('/login', [AuthController::class, 'login']);
 });
 
 Route::prefix('directorate')->group(function () {

@@ -58,20 +58,8 @@
             </thead>
             <tbody>
                 <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
+                    <td class="table__body-td"></td>
+                    <td class="table__body-td"></td>
                 </tr>
             </tbody>
         </table>
@@ -89,20 +77,8 @@
             </thead>
             <tbody>
                 <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
+                    <td class="table__body-td"></td>
+                    <td class="table__body-td"></td>
                 </tr>
             </tbody>
         </table>
@@ -120,20 +96,8 @@
             </thead>
             <tbody>
                 <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
+                    <td class="table__body-td"></td>
+                    <td class="table__body-td"></td>
                 </tr>
             </tbody>
         </table>
@@ -151,20 +115,8 @@
             </thead>
             <tbody>
                 <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
-                </tr>
-                <tr class="table__body-tr">
-                    <td class="table__body-td" contenteditable=""></td>
-                    <td class="table__body-td" contenteditable=""></td>
+                    <td class="table__body-td"></td>
+                    <td class="table__body-td"></td>
                 </tr>
             </tbody>
         </table>

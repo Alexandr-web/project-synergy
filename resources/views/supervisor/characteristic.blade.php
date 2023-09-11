@@ -8,3 +8,7 @@
 <x-result-last-meeting-component :checkbox="true" />
 <x-development-prospects-component />
 @endsection
+
+@section('scripts')
+    @vite(['resources/js/pages/supervisor/characteristic.js'])
+@endsection

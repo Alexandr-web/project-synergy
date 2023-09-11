@@ -1,4 +1,5 @@
 import ValidForm from "../classes/ui/ValidForm";
+import renderStudent from "./renderStudent";
 
 export default (selectorSearchForm = "#search-student-form") => {
     const form = document.querySelector(selectorSearchForm);
