@@ -4,7 +4,7 @@
 
 @section('content')
     <x-student-list-info-component />
-    <x-manager-characteristic-component />
+    <x-manager-characteristic-component :readonly="true" />
     <x-feedback-component />
 @endsection
 

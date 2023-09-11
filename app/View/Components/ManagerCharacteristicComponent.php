@@ -9,13 +9,15 @@ use Illuminate\View\Component;
 class ManagerCharacteristicComponent extends Component
 {
     public bool $submit = false;
+    public bool $readonly = false;
 
     /**
      * Create a new component instance.
      */
-    public function __construct(bool $submit = false)
+    public function __construct(bool $submit = false, bool $readonly = false)
     {
         $this->submit = $submit;
+        $this->readonly = $readonly;
     }
 
     /**

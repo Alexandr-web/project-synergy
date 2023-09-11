@@ -3,6 +3,6 @@
         <x-employee-info-component />
     </div>
 </div>
-<x-manager-characteristic-component />
+<x-manager-characteristic-component :readonly="true" />
 <x-feedback-component />
 <x-result-last-meeting-component :checkbox="true" />
