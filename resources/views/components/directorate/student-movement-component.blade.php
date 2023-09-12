@@ -5,25 +5,83 @@
     <div class="section__main">
         <table class="table">
             <thead class="table__head">
-                <th class="table__head-th table__cell" contenteditable="">На 27.09</th>
-                <th class="table__head-th table__cell" contenteditable="">На Прибыло/убыло</th>
-                <th class="table__head-th table__cell" contenteditable="">На 27.09</th>
+                <th class="table__head-th table__cell"></th>
+                <th class="table__head-th table__cell" colspan="3">На 27.09</th>
+                <th class="table__head-th table__cell table__cell--grey" colspan="3">Прибыло/убыло</th>
+                <th class="table__head-th table__cell" colspan="3">На 27.09</th>
             </thead>
             <tbody class="table__body">
                 <tr class="table__body-tr">
-                    <td class="table__body-td table__cell" contenteditable="">М</td>
-                    <td class="table__body-td table__cell" contenteditable="">Ж</td>
-                    <td class="table__body-td table__cell" contenteditable="">Всего</td>
+                    <td class="table__body-td table__cell table__cell--center table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--center">М</td>
+                    <td class="table__body-td table__cell table__cell--center">Ж</td>
+                    <td class="table__body-td table__cell table__cell--center">Всего</td>
+                    <td class="table__body-td table__cell table__cell--center table__cell--grey">М</td>
+                    <td class="table__body-td table__cell table__cell--center table__cell--grey">Ж</td>
+                    <td class="table__body-td table__cell table__cell--center table__cell--grey">Всего</td>
+                    <td class="table__body-td table__cell table__cell--center">М</td>
+                    <td class="table__body-td table__cell table__cell--center">Ж</td>
+                    <td class="table__body-td table__cell table__cell--center">Всего</td>
                 </tr>
                 <tr class="table__body-tr">
-                    <td class="table__body-td table__cell" contenteditable="">М</td>
-                    <td class="table__body-td table__cell" contenteditable="">Ж</td>
-                    <td class="table__body-td table__cell" contenteditable="">Всего</td>
+                    <td class="table__body-td table__cell table__cell--grey">1 курс</td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
                 </tr>
                 <tr class="table__body-tr">
-                    <td class="table__body-td table__cell" contenteditable="">М</td>
-                    <td class="table__body-td table__cell" contenteditable="">Ж</td>
-                    <td class="table__body-td table__cell" contenteditable="">Всего</td>
+                    <td class="table__body-td table__cell table__cell--grey">2 курс</td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                </tr>
+                <tr class="table__body-tr">
+                    <td class="table__body-td table__cell table__cell--grey">3 курс</td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                </tr>
+                <tr class="table__body-tr">
+                    <td class="table__body-td table__cell table__cell--grey">4 курс</td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                </tr>
+                <tr class="table__body-tr">
+                    <td class="table__body-td table__cell table__cell--grey">Всего</td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell table__cell--grey"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
+                    <td class="table__body-td table__cell"></td>
                 </tr>
             </tbody>
         </table>

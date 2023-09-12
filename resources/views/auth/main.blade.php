@@ -19,7 +19,3 @@
     </ul>
 </div>
 @endsection
-
-@section('scripts')
-    @vite(['resources/js/pages/auth/index.js'])
-@endsection

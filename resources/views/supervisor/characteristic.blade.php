@@ -5,7 +5,7 @@
 @section('content')
 <x-manager-characteristic-component :submit="true" />
 <x-result-meeting-component :submit="true" />
-<x-result-last-meeting-component :checkbox="true" />
+<x-result-last-meeting-component :checkbox="true" :disabled="true" />
 <x-development-prospects-component />
 @endsection
 

@@ -508,6 +508,16 @@
         }
     }
 
+    &__cell {
+        &--center {
+            text-align: center;
+        }
+
+        &--grey {
+            background-color: $lightGrey8;
+        }
+    }
+
     &__head {
 
         &-th {
@@ -528,6 +538,8 @@
         }
 
         &-td {
+            font-size: 17.533px;
+            font-weight: 600;
             padding: 10px 8px;
 
             &:not(:last-child) {

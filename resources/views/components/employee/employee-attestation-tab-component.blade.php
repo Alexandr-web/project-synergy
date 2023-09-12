@@ -6,39 +6,39 @@
     <div class="section__main">
         <ul class="documents-list">
             <li class="document-card">
-                <img class="document-card__image" src="{{ asset('images/docx_icon.png') }}" alt="Документ">
+                <img class="document-card__image" src="{{ asset('icons/docx_icon.svg') }}" alt="Документ">
                 <a class="document-card__link" href="#download">Таблица_1.docx</a>
             </li>
             <li class="document-card">
-                <img class="document-card__image" src="{{ asset('images/docx_icon.png') }}" alt="Документ">
+                <img class="document-card__image" src="{{ asset('icons/docx_icon.svg') }}" alt="Документ">
                 <a class="document-card__link" href="#download">Таблица_1.docx</a>
             </li>
             <li class="document-card">
-                <img class="document-card__image" src="{{ asset('images/docx_icon.png') }}" alt="Документ">
+                <img class="document-card__image" src="{{ asset('icons/docx_icon.svg') }}" alt="Документ">
                 <a class="document-card__link" href="#download">Таблица_1.docx</a>
             </li>
             <li class="document-card">
-                <img class="document-card__image" src="{{ asset('images/docx_icon.png') }}" alt="Документ">
+                <img class="document-card__image" src="{{ asset('icons/docx_icon.svg') }}" alt="Документ">
                 <a class="document-card__link" href="#download">Таблица_1.docx</a>
             </li>
             <li class="document-card">
-                <img class="document-card__image" src="{{ asset('images/docx_icon.png') }}" alt="Документ">
+                <img class="document-card__image" src="{{ asset('icons/docx_icon.svg') }}" alt="Документ">
                 <a class="document-card__link" href="#download">Таблица_1.docx</a>
             </li>
             <li class="document-card">
-                <img class="document-card__image" src="{{ asset('images/docx_icon.png') }}" alt="Документ">
+                <img class="document-card__image" src="{{ asset('icons/docx_icon.svg') }}" alt="Документ">
                 <a class="document-card__link" href="#download">Таблица_1.docx</a>
             </li>
             <li class="document-card">
-                <img class="document-card__image" src="{{ asset('images/docx_icon.png') }}" alt="Документ">
+                <img class="document-card__image" src="{{ asset('icons/docx_icon.svg') }}" alt="Документ">
                 <a class="document-card__link" href="#download">Таблица_1.docx</a>
             </li>
             <li class="document-card">
-                <img class="document-card__image" src="{{ asset('images/docx_icon.png') }}" alt="Документ">
+                <img class="document-card__image" src="{{ asset('icons/docx_icon.svg') }}" alt="Документ">
                 <a class="document-card__link" href="#download">Таблица_1.docx</a>
             </li>
             <li class="document-card">
-                <img class="document-card__image" src="{{ asset('images/docx_icon.png') }}" alt="Документ">
+                <img class="document-card__image" src="{{ asset('icons/docx_icon.svg') }}" alt="Документ">
                 <a class="document-card__link" href="#download">Таблица_1.docx</a>
             </li>
         </ul>

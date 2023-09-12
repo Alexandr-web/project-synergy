@@ -1,6 +1,6 @@
 <div class="student-info">
     <div class="student-info__block">
-        <img class="student-info__avatar" src="{{ asset('images/avatar.png') }}" alt="Иванов Иван Иванович">
+        <img class="student-info__avatar" src="{{ asset('icons/avatar.svg') }}" alt="Иванов Иван Иванович">
     </div>
     <div class="student-info__block">
         <h2 class="student-info__title">Иванов Иван Иванович</h2>
