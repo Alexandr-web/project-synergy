@@ -1,15 +1,8 @@
 import renderEvent from "../../scripts/renderEvent";
+import CustomSelect from "../../classes/ui/CustomSelect";
 
 export default () => {
-    const select = document.querySelector("#event-loop-select");
-
-    if (!select) {
-        return;
-    }
-
-    select.addEventListener("change", () => {
-        const val = select.value;
-
-        console.log(val);
-    });
+    new CustomSelect("#event-loop-select", (text) => {
+        console.log(text);
+    }).init();
 };

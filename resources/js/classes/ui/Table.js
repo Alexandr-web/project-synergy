@@ -1,6 +1,4 @@
 import xlsx from "xlsx";
-import Alert from "./Alert";
-import NothingText from "./NothingText";
 
 export default class Table {
     constructor(selectorTable, selectorBtnDownload, selectorBtnSave, selectorInputUpload) {
@@ -8,9 +6,6 @@ export default class Table {
         this.btnDownload = document.querySelector(selectorBtnDownload);
         this.btnSave = document.querySelector(selectorBtnSave);
         this.inputUpload = document.querySelector(selectorInputUpload);
-
-        this.alert = new Alert().init();
-        this.nothingText = new NothingText();
         this.selectorTable = selectorTable;
     }
 
@@ -62,14 +57,9 @@ export default class Table {
         const table = this._getElementTable(htmlStr);
 
         this.table.innerHTML = table.innerHTML;
-
-        this.alert.show("success", "Файл был успешно загружен");
-        this.nothingText.hide();
     }
 
     _handlerErrorByUploadFile(reader) {
-        this.alert.show("error", `Произошла ошибка при загрузке файла: "${reader.error}"`);
-
         throw reader.error;
     }
 
@@ -81,10 +71,6 @@ export default class Table {
         this.inputUpload.addEventListener("change", (e) => {
             const reader = new FileReader();
             const file = e.target.files[0];
-
-            if (file.type !== "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
-                this.alert.show("error", "Файл с таким расширением не поддерживается");
-            }
 
             reader.readAsArrayBuffer(file);
 

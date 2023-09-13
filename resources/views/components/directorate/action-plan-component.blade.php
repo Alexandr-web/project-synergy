@@ -1,3 +1,28 @@
+<?php
+    $options = [
+        [
+            'value' => 'сентябрь 2021 - октябрь 2022',
+            'text' => 'сентябрь 2021 - октябрь 2022'
+        ],
+        [
+            'value' => 'сентябрь 2021 - октябрь 2022',
+            'text' => 'сентябрь 2021 - октябрь 2022'
+        ],
+        [
+            'value' => 'сентябрь 2021 - октябрь 2022',
+            'text' => 'сентябрь 2021 - октябрь 2022'
+        ],
+        [
+            'value' => 'сентябрь 2021 - октябрь 2022',
+            'text' => 'сентябрь 2021 - октябрь 2022'
+        ],
+        [
+            'value' => 'сентябрь 2021 - октябрь 2022',
+            'text' => 'сентябрь 2021 - октябрь 2022'
+        ]
+    ];
+?>
+
 <div class="section action-plan">
     <header class="section__header">
         <h2 class="section__title">План мероприятий</h2>
@@ -6,12 +31,7 @@
         <ul class="selections">
             <li class="selections-item">
                 <span class="selections-item__name">Цикл событий по развитию</span>
-                <select class="form__select" id="event-loop-select">
-                    <option class="form__select-option" value="сентябрь 2021 - октябрь 2022">сентябрь 2021 - октябрь 2022</option>
-                    <option class="form__select-option" value="сентябрь 2021 - октябрь 2022">сентябрь 2021 - октябрь 2022</option>
-                    <option class="form__select-option" value="сентябрь 2021 - октябрь 2022">сентябрь 2021 - октябрь 2022</option>
-                    <option class="form__select-option" value="сентябрь 2021 - октябрь 2022">сентябрь 2021 - октябрь 2022</option>
-                </select>
+                <x-custom-select-component id="event-loop-select" tabBody="event" :options="$options" />
             </li>
         </ul>
     </aside>

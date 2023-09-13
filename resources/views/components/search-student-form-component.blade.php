@@ -1,3 +1,43 @@
+<?php
+    $options_for_year = [
+        [
+            'text' => '2023',
+            'value' => '2023'
+        ],
+        [
+            'text' => '2022',
+            'value' => '2022'
+        ],
+        [
+            'text' => '2021',
+            'value' => '2021'
+        ],
+        [
+            'text' => '2020',
+            'value' => '2020'
+        ],
+        [
+            'text' => '2019',
+            'value' => '2019'
+        ]
+    ];
+
+    $options_for_subdivision = [
+        [
+            'text' => 'Структурное подразделение 1',
+            'value' => 'Структурное подразделение 1'
+        ],
+        [
+            'text' => 'Структурное подразделение 2',
+            'value' => 'Структурное подразделение 2'
+        ],
+        [
+            'text' => 'Структурное подразделение 3',
+            'value' => 'Структурное подразделение 3'
+        ]
+    ];
+?>
+
 <div class="search">
     <form class="search__form" id="search-student-form">
         <div class="search__block">
@@ -15,13 +55,7 @@
                 <div class="form__field form__field--row">
                     <div class="form__field-title">Год поступления</div>
                     <div class="form__field-content">
-                        <select class="form__select form__select--white" name="year-admission">
-                            <option class="form__select-option" value="2023">2023</option>
-                            <option class="form__select-option" value="2022">2022</option>
-                            <option class="form__select-option" value="2021">2021</option>
-                            <option class="form__select-option" value="2020">2020</option>
-                            <option class="form__select-option" value="2019">2019</option>
-                        </select>
+                        <x-custom-select-component tabBody="year-education" id="year-education-select" :options="$options_for_year" :white="true" :small="true" />
                     </div>
                 </div>
                 <div class="form__field form__field--row">
@@ -77,12 +111,7 @@
                 <div class="form__field">
                     <div class="form__field-title m-b-10">Структурное подразделение</div>
                     <div class="form__field-content">
-                        <select class="form__select form__select--white" name="subdivision">
-                            <option class="form__select-option" value="Структурное подразделение 1">Структурное подразделение 1</option>
-                            <option class="form__select-option" value="Структурное подразделение 1">Структурное подразделение 1</option>
-                            <option class="form__select-option" value="Структурное подразделение 1">Структурное подразделение 1</option>
-                            <option class="form__select-option" value="Структурное подразделение 1">Структурное подразделение 1</option>
-                        </select>
+                        <x-custom-select-component tabBody="subdivision-tab" id="subdivision-select" :options="$options_for_subdivision" :white="true" :small="true" />
                     </div>
                 </div>
                 <div class="form__field form__field--row">
