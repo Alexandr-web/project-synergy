@@ -1,4 +1,6 @@
 import Route from "../classes/ui/Route";
+import ValidForm from "../classes/ui/ValidForm";
+import Auth from "../classes/request/Auth";
 
 window.addEventListener("load", () => {
     const form = document.querySelector("#login-form");
@@ -7,16 +9,25 @@ window.addEventListener("load", () => {
         return;
     }
 
+    const options = {
+        username: { min: 6, },
+        password: { min: 6, },
+    };
+
     const route = new Route();
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const fd = new FormData(form);
+    const callbackWhenAllCompleted = (fd) => {
         const role = route.getQuery("role");
 
         fd.set("role", role);
 
-        fd.forEach((val, name) => console.log(`${name}: ${val}`));
-    });
+        new Auth()
+            .login(fd)
+            .then((data) => console.log(data))
+            .catch((err) => {
+                throw err;
+            });
+    };
+
+    new ValidForm("#login-form", options, callbackWhenAllCompleted).init();
 });

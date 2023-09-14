@@ -10,7 +10,7 @@
 	@endif
 	<form class="form" id="login-form">
 		<div class="form__field">
-			<input class="form__input" type="text" placeholder="Логин" name="login">
+			<input class="form__input" type="text" placeholder="Логин" name="username">
 		</div>
 		<div class="form__field">
 			<input class="form__input" type="password" placeholder="Пароль" name="password">

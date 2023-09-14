@@ -1,10 +1,7 @@
 import Cookie from "js-cookie";
-import host from "../../helpers/host";
 
 export default class Request {
     constructor() {
-        this.HOST = host;
-        this.CSRF_TOKEN = document.querySelector("meta[name=csrf-token]").content;
         this.TOKEN = Cookie.get("token") || "";
     }
 
@@ -25,9 +22,7 @@ export default class Request {
         const body = options.body || {};
         const headers = {
             ...incomingHeaders,
-            "Accept-Type": "application/json",
             "X-Requested-With": "XMLHttpRequest",
-            "X-CSRF-TOKEN": this.CSRF_TOKEN,
         };
         const config = {
             method,
@@ -39,7 +34,7 @@ export default class Request {
             .then((data) => data.json())
             .catch((error) => {
                 console.error(error);
-                return { success: false, message: error.message, error, };
+                return { message: error.error_description, error: error.error, };
             });
     }
 }
