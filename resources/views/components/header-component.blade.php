@@ -9,7 +9,7 @@
         </div>
         @if (!$auth)
         <div class="header__logout">
-            <button class="header__logout-btn">Выйти</button>
+            <button class="header__logout-btn" id="logout-btn">Выйти</button>
         </div>
         @endif
     </div>

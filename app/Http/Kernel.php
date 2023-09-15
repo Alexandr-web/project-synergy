@@ -65,8 +65,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'role_must_be' => \App\Http\Middleware\RoleMustBe::class,
-        'redirect_if_token_exist' => \App\Http\Middleware\RedirectIfTokenExist::class,
-        'redirect_if_token_not_exist' => \App\Http\Middleware\RedirectIfTokenNotExist::class,
-        'check_auth' => \App\Http\Middleware\CheckAuthorization::class,
+        'abort_if_token_exist' => \App\Http\Middleware\AbortIfTokenExist::class,
+        'abort_if_token_not_exist' => \App\Http\Middleware\AbortIfTokenNotExist::class,
     ];
 }

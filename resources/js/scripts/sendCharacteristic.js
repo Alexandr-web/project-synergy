@@ -1,4 +1,4 @@
-import ValidForm from "../../classes/ui/ValidForm";
+import ValidForm from "../classes/ui/ValidForm";
 
 export default () => {
     const form = document.querySelector("#manager-characteristic");

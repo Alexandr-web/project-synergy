@@ -8,7 +8,7 @@
     <ul class="auth__roles-list">
         <li class="auth__role">
             <a class="auth__role-link" href="/auth/login?role=directorate">Вход</a>
-            <p class="text-directorate auth__role-info"> Только для сотрудников Дирекции программы «Кадровый резерв»</p>
+            <p class="text-directorate auth__role-info">Только для сотрудников Дирекции программы «Кадровый резерв»</p>
         </li>
         <li class="auth__role">
             <a class="auth__role-link" href="/auth/login?role=student">Студент</a>

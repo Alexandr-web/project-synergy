@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Helpers\AuthToken;
 
-class CheckAuthorization
+class AbortIfTokenExist
 {
     /**
      * Handle an incoming request.
@@ -16,19 +16,12 @@ class CheckAuthorization
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $header_auth = $request->header('Authorization') ?? '';
+        $token = (bool) AuthToken::get();
 
-        if (!$header_auth) {
-            $request->is_auth = false;
-            $request->token_data = null;
-
-            return $next($request);
+        if ($token) {
+            return abort(404);
         }
 
-        $token_str = explode(' ', $header_auth)[1];
-        $request->is_auth = (bool) $token_str;
-        $request->token_data = AuthToken::decode($token_str);
-        
         return $next($request);
     }
 }

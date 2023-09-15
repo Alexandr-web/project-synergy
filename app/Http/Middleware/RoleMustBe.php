@@ -5,7 +5,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Helpers\AuthToken;
 
 class RoleMustBe
 {
@@ -16,10 +15,9 @@ class RoleMustBe
      */
     public function handle(Request $request, Closure $next, string $role): Response
     {
-        $token = AuthToken::get();
-        $token_data = AuthToken::decode($token);
+        $role_from_cookie = $_COOKIE['role'];
 
-        if ($token_data['role'] !== $role) {
+        if ($role_from_cookie !== $role) {
             return abort(404);
         }
 

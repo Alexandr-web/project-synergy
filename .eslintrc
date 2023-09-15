@@ -19,6 +19,7 @@
             "error",
             "double"
         ],
+        "no-useless-constructor": "off",
         "no-tabs": "off",
         "indent": "off",
         "import/no-import-module-exports": "off",

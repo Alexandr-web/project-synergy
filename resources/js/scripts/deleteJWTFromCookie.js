@@ -1,7 +1,7 @@
-import Cookie from "js-cookie";
+import CurrentUser from "../classes/ui/CurrentUser";
 import Route from "../classes/ui/Route";
 
-window.addEventListener("load", () => {
+export default () => {
     const btn = document.querySelector("#logout-btn");
 
     if (!btn) {
@@ -9,8 +9,8 @@ window.addEventListener("load", () => {
     }
 
     btn.addEventListener("click", () => {
-        Cookie.remove("token");
+        new CurrentUser().removeFromCookie();
 
-        new Route().redirect("/auth/login");
+        return new Route().redirect("/auth");
     });
-});
+};
