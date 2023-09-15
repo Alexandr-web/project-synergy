@@ -8,22 +8,25 @@
     <div class="section__main">
         <ul class="students-list">
             <li class="student">
-                <a class="student__link" href="/students/1">Иванов Иван Иванович</a>
+                <a class="student__link" href="/students/1/{{ $viewAttestationSheet ? 'attestation-sheet' : '' }}">Иванов Иван Иванович</a>
             </li>
             <li class="student">
-                <a class="student__link" href="/students/1">Иванов Иван Иванович</a>
+                <a class="student__link" href="/students/1/{{ $viewAttestationSheet ? 'attestation-sheet' : '' }}">Иванов Иван Иванович</a>
             </li>
             <li class="student">
-                <a class="student__link" href="/students/1">Иванов Иван Иванович</a>
+                <a class="student__link" href="/students/1/{{ $viewAttestationSheet ? 'attestation-sheet' : '' }}">Иванов Иван Иванович</a>
             </li>
             <li class="student">
-                <a class="student__link" href="/students/1">Иванов Иван Иванович</a>
+                <a class="student__link" href="/students/1/{{ $viewAttestationSheet ? 'attestation-sheet' : '' }}">Иванов Иван Иванович</a>
             </li>
             <li class="student">
-                <a class="student__link" href="/students/1">Иванов Иван Иванович</a>
+                <a class="student__link" href="/students/1/{{ $viewAttestationSheet ? 'attestation-sheet' : '' }}">Иванов Иван Иванович</a>
             </li>
             <li class="student">
-                <a class="student__link" href="/students/1">Иванов Иван Иванович</a>
+                <a class="student__link" href="/students/1/{{ $viewAttestationSheet ? 'attestation-sheet' : '' }}">Иванов Иван Иванович</a>
+            </li>
+            <li class="student">
+                <a class="student__link" href="/students/1/{{ $viewAttestationSheet ? 'attestation-sheet' : '' }}">Иванов Иван Иванович</a>
             </li>
         </ul>
     </div>

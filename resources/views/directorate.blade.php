@@ -1,3 +1,5 @@
+<?php $role = $_COOKIE['role']; ?>
+
 @extends('layouts.default')
 
 @section('title', 'Дирекция')
@@ -6,7 +8,7 @@
     <x-public-info-component idList="public-info-list-documents" />
     <x-action-plan-component />
     <x-student-movement-component />
-    <x-students-list-component />
+    <x-students-list-component viewAttestationSheet="{{ $role === 'supervisor' }}" />
 @endsection
 
 @section('scripts')

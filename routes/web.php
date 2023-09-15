@@ -29,7 +29,7 @@ Route::prefix('auth')->group(function () {
 Route::prefix('directorate')->group(function () {
     Route::view('/', 'directorate')
         ->middleware('redirect_if_token_not_exist')
-        ->middleware('role_must_be:directorate');
+        ->middleware('role_must_be:directorate supervisor');
 });
 
 Route::prefix('supervisor')->group(function () {
@@ -45,11 +45,12 @@ Route::prefix('supervisor')->group(function () {
 Route::prefix('students')->group(function () {
     Route::view('/{id}', 'students.index')
         ->middleware('redirect_if_token_not_exist')
+        ->middleware('role_must_be:directorate')
         ->where('id', '[0-9]+');
 
     Route::view('/{id}/attestation-sheet', 'students.attestation-sheet')
         ->middleware('redirect_if_token_not_exist')
-        ->middleware('role_must_be:student')
+        ->middleware('role_must_be:student supervisor')
         ->where('id', '[0-9]+');
 });
 

@@ -13,11 +13,11 @@ class RoleMustBe
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, string $role): Response
+    public function handle(Request $request, Closure $next, string $roles): Response
     {
-        $role_from_cookie = $_COOKIE['role'];
+        $role = $_COOKIE['role'];
 
-        if ($role_from_cookie !== $role) {
+        if (!in_array($role, explode(' ', $roles))) {
             return abort(404);
         }
 
