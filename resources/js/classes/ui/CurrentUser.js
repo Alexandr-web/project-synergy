@@ -8,12 +8,13 @@ export default class CurrentUser {
         return jwtDecode(token);
     }
 
-    removeFromCookie() {
+    removeDataFromCookie() {
         Cookie.remove("token");
+        Cookie.remove("refresh_token");
         Cookie.remove("role");
     }
 
-    addToCookie(token, expires) {
-        Cookie.set("token", token, { expires, });
+    addTokenToCookie(name, token, expires) {
+        Cookie.set(name, token, { expires, });
     }
 }

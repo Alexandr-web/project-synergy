@@ -56,11 +56,13 @@ window.addEventListener("load", () => {
                     return;
                 }
 
-                const { expires, access_token, } = res;
+                const { expires_in, refresh_expires_in, access_token, refresh_token, } = res;
+                const currentUser = new CurrentUser();
 
                 Cookie.set("role", role);
 
-                new CurrentUser().addToCookie(access_token, expires);
+                currentUser.addTokenToCookie("token", access_token, expires_in);
+                currentUser.addTokenToCookie("refresh_token", refresh_token, refresh_expires_in);
 
                 return redirectByRole(role, route);
             }).catch((err) => {
