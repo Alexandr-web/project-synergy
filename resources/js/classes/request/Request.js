@@ -3,6 +3,8 @@ import Cookie from "js-cookie";
 export default class Request {
     constructor() {
         this.TOKEN = Cookie.get("token") || "";
+        this.HOST = "http://127.0.0.1:8000";
+        this.CSRF_TOKEN = document.querySelector("meta[name=csrf-token]").content;
     }
 
     _getBodyLength(body) {
@@ -22,6 +24,7 @@ export default class Request {
         const body = options.body || {};
         const headers = {
             ...incomingHeaders,
+            "X-CSRF-TOKEN": this.CSRF_TOKEN,
             "X-Requested-With": "XMLHttpRequest",
         };
         const config = {
