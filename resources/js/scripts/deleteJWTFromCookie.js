@@ -1,5 +1,7 @@
-import CurrentUser from "../classes/ui/CurrentUser";
 import Route from "../classes/ui/Route";
+import Auth from "../classes/request/Auth";
+import CurrentUser from "../classes/ui/CurrentUser";
+import Cookie from "js-cookie";
 
 export default () => {
     const btn = document.querySelector("#logout-btn");
@@ -9,8 +11,19 @@ export default () => {
     }
 
     btn.addEventListener("click", () => {
-        new CurrentUser().removeFromCookie();
+        const accessToken = Cookie.get("token");
+        const refreshToken = Cookie.get("refresh_token");
 
-        return new Route().redirect("/auth");
+        new Auth()
+            .logout({ refresh_token: refreshToken, }, accessToken)
+            .then(({ status, }) => {
+                if (status === 200) {
+                    new CurrentUser().removeDataFromCookie();
+
+                    return new Route().redirect("/auth");
+                }
+            }).catch((err) => {
+                throw err;
+            });
     });
 };

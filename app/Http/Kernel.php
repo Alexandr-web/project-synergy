@@ -66,6 +66,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'role_must_be' => \App\Http\Middleware\RoleMustBe::class,
         'abort_if_token_exist' => \App\Http\Middleware\AbortIfTokenExist::class,
-        'abort_if_token_not_exist' => \App\Http\Middleware\AbortIfTokenNotExist::class,
+        'redirect_if_token_not_exist' => \App\Http\Middleware\RedirectIfTokenNotExist::class
     ];
 }

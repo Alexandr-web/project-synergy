@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Helpers\AuthToken;
 
-class AbortIfTokenNotExist
+class RedirectIfTokenNotExist
 {
     /**
      * Handle an incoming request.
@@ -19,7 +19,7 @@ class AbortIfTokenNotExist
         $token = (bool) AuthToken::get();
 
         if (!$token) {
-            return abort(404);
+            return redirect('/auth');
         }
 
         return $next($request);
