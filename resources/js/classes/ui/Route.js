@@ -19,6 +19,12 @@ export default class Route {
         return "";
     }
 
+    getParamByIndex(index) {
+        const str = this.location.href;
+
+        return str.split("/")[index];
+    }
+
     redirect(url = "/") {
         this.location.href = url;
     }

@@ -1,4 +1,6 @@
 import ValidForm from "../../classes/ui/ValidForm";
+import Route from "../../classes/ui/Route";
+import Cookie from "js-cookie";
 
 export default () => {
     const form = document.querySelector("#attestation-sheet-form");
@@ -34,6 +36,8 @@ export default () => {
     };
 
     const callbackWhenAllCompleted = (fd) => {
+        fd.set("id", new Route().getParamByIndex(4));
+
         fd.forEach((val, name) => console.log(`${name}: ${val}`));
     };
 

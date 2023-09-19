@@ -8,11 +8,11 @@ use ReallySimpleJWT\Token;
 
 class AuthToken {
     static function get() {
-        if (!array_key_exists('token', $_COOKIE)) {
+        if (!array_key_exists('access_token', $_COOKIE)) {
             return '';
         }
 
-        return $_COOKIE['token'];
+        return $_COOKIE['access_token'];
     }
 
     static function decode(string $token) {

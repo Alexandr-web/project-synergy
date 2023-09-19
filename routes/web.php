@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,13 +34,15 @@ Route::prefix('directorate')->group(function () {
 });
 
 Route::prefix('supervisor')->group(function () {
-    Route::view('/employees', 'supervisor.employees')
+    Route::view('/{id}/employees', 'supervisor.employees')
         ->middleware('redirect_if_token_not_exist')
-        ->middleware('role_must_be:supervisor');
+        ->middleware('role_must_be:supervisor')
+        ->where('id', '[0-9]+');
 
-    Route::view('/characteristic', 'supervisor.characteristic')
+    Route::view('/{id}/characteristic', 'supervisor.characteristic')
         ->middleware('redirect_if_token_not_exist')
-        ->middleware('role_must_be:supervisor');
+        ->middleware('role_must_be:supervisor')
+        ->where('id', '[0-9]+');
 });
 
 Route::prefix('students')->group(function () {
@@ -52,6 +55,8 @@ Route::prefix('students')->group(function () {
         ->middleware('redirect_if_token_not_exist')
         ->middleware('role_must_be:student supervisor')
         ->where('id', '[0-9]+');
+    
+    Route::post('/authorization', [StudentController::class, 'authorization']);
 });
 
 Route::prefix('employees')->group(function () {
