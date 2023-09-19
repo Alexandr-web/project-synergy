@@ -494,6 +494,12 @@
     border: 1px solid $lightGrey7;
     border-collapse: collapse;
 
+    &--small {
+        width: 540px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
     &--grey {
         .table {
             &__head {
@@ -505,16 +511,6 @@
                     font-weight: 700;
                 }
             }
-        }
-    }
-
-    &__cell {
-        &--center {
-            text-align: center;
-        }
-
-        &--grey {
-            background-color: $lightGrey8;
         }
     }
 
@@ -545,6 +541,26 @@
             &:not(:last-child) {
                 border-right: 1px solid $lightGrey7;
             }
+        }
+    }
+
+    &__cell {
+        vertical-align: text-top;
+
+        &--regular {
+            font-weight: 400;
+        }
+
+        &--center {
+            text-align: center;
+        }
+
+        &--grey {
+            background-color: $lightGrey8;
+        }
+
+        &--grey-b-border {
+            border-bottom: 0.69px solid $lightGrey12;
         }
     }
 }

@@ -2,7 +2,7 @@ import Cookie from "js-cookie";
 
 export default class Request {
     constructor() {
-        this.TOKEN = Cookie.get("token") || "";
+        this.ACCESS_TOKEN = Cookie.get("access_token") || "";
         this.HOST = "http://127.0.0.1:8000";
         this.CSRF_TOKEN = document.querySelector("meta[name=csrf-token]").content;
     }

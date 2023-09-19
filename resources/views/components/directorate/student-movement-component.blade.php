@@ -85,5 +85,35 @@
                 </tr>
             </tbody>
         </table>
+        <table class="table m-t-55 table--small">
+            <tr class="table__tr">
+              <th class="table__head-th table__cell table__cell--grey" rowspan="4">Выбыло</th>
+              <th class="table__head-th table__cell" rowspan="4">1 курс</th>
+              <td class="table__body-td table__cell table__cell--grey-b-border table__cell--regular">Иванов Иван Иванович</td>
+            </tr>
+            <tr>
+              <td class="table__body-td table__cell table__cell--grey-b-border table__cell--regular">Иванов Иван Иванович</td>
+            </tr>
+            <tr>
+              <td class="table__body-td table__cell table__cell--grey-b-border table__cell--regular">Иванов Иван Иванович</td>
+            </tr>
+            <tr>
+              <td class="table__body-td table__cell table__cell--grey-b-border table__cell--regular">Иванов Иван Иванович</td>
+            </tr>
+            <tr>
+              <th class="table__head-th table__cell table__cell--grey" rowspan="4"></th>
+              <th class="table__head-th table__cell" rowspan="4">2 курс</th>
+              <td class="table__body-td table__cell table__cell--grey-b-border table__cell--regular">Иванов Иван Иванович</td>
+            </tr>
+            <tr>
+              <td class="table__body-td table__cell table__cell--grey-b-border table__cell--regular">Иванов Иван Иванович</td>
+            </tr>
+            <tr>
+              <td class="table__body-td table__cell table__cell--grey-b-border table__cell--regular">Иванов Иван Иванович</td>
+            </tr>
+            <tr>
+              <td class="table__body-td table__cell table__cell--grey-b-border table__cell--regular">Иванов Иван Иванович</td>
+            </tr>
+          </table>
     </div>
 </div>

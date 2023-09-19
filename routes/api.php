@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix('students')->group(function () {
+    Route::get('/{id}/info', [StudentController::class, 'getInfo'])
+        ->where('id', '[0-9]+');
 });
